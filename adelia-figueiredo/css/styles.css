@@ -1,0 +1,94 @@
+/* ── O que o Tailwind não cobre ── */
+
+html { scroll-behavior: smooth; }
+
+/* Border-radius assimétrico nos frames de foto */
+.hero-image-frame  { border-radius: 4px 60px 4px 60px; }
+.about-image-frame { border-radius: 4px 80px 4px 4px; }
+
+/* Linha decorativa antes dos eyebrows (pseudo-elemento) */
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: #5A7A62;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #C2956C;
+}
+
+/* Seta animada no botão secundário */
+.btn-secondary::after {
+  content: '→';
+  transition: transform 0.2s;
+}
+.btn-secondary:hover::after {
+  transform: translateX(4px);
+}
+
+/* Linha verde que expande no hover das etapas */
+.approach-step::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 28px;
+  right: 28px;
+  height: 2px;
+  background: #5A7A62;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: left;
+}
+.approach-step:hover::after {
+  transform: scaleX(1);
+}
+
+/* Pulse no badge do hero */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.6; transform: scale(0.85); }
+}
+.hero-badge-dot { animation: pulse-dot 2.5s ease-in-out infinite; }
+
+/* Sistema de fade-up (controlado via IntersectionObserver no JS) */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-up.visible        { opacity: 1; transform: translateY(0); }
+.fade-up-delay-1        { transition-delay: 0.1s; }
+.fade-up-delay-2        { transition-delay: 0.2s; }
+.fade-up-delay-3        { transition-delay: 0.3s; }
+.fade-up-delay-4        { transition-delay: 0.4s; }
+
+/* Mobile nav — estado e transições que Tailwind não gerencia via JS */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: #FAF7F3;
+    flex-direction: column;
+    gap: 0;
+    border-bottom: 1px solid #E5E0D8;
+    padding: 8px 0;
+    z-index: 50;
+  }
+  .nav-links.open          { display: flex; }
+  .nav-links li a          { display: block; padding: 14px 24px; }
+  .nav-links li:last-child a {
+    margin: 8px 24px 12px;
+    text-align: center;
+    border-radius: 6px;
+  }
+  .nav-hamburger           { display: flex !important; }
+}
