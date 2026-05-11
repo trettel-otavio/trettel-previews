@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Mariana Hespanhol | Psiquiatra em Sorocaba</title>
+    <meta name="description" content="Atendimento psiquiátrico em Sorocaba com hora marcada, consulta completa e sem pressa. Presencial no Jardim Portal da Colina ou online.">
+    
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: '#2D4A35',
+                        deep: '#1C2B20',
+                        sage: '#6B8F71',
+                        soft: '#FAFAF8',
+                        cream: '#F7F5F0',
+                        beige: '#E0DDD5',
+                        accent: '#E8F0E9',
+                        gold: '#E8B14A'
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.03)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #FAFAF8;
+            color: #5A5A52;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #1C2B20;
+        }
+        /* Custom blobs and organic shapes */
+        .blob-bg {
+            position: absolute;
+            background: #E8F0E9;
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        .placeholder-image {
+            background-color: #E0DDD5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6B8F71;
+            font-size: 0.875rem;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .placeholder-image::after {
+            content: 'Imagem';
+        }
+    </style>
+</head>
+<body class="font-sans relative overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="bg-soft py-4 px-6 md:px-12 border-b border-beige fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex flex-col items-center leading-tight">
+                <span class="font-semibold text-lg text-forest tracking-tight">Dra. Mariana Hespanhol</span>
+                <span class="text-[10px] font-medium text-sage tracking-widest uppercase">CRM SP 222667</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#especialidades" class="hover:text-forest transition-colors">Especialidades</a>
+                <a href="#prova-social" class="hover:text-forest transition-colors">Avaliações</a>
+                <a href="#onde-fica" class="hover:text-forest transition-colors">Consultório</a>
+                <a href="#sobre" class="hover:text-forest transition-colors">Sobre</a>
+            </div>
+            <a href="https://wa.me/seunumerodequalquer" target="_blank" class="bg-forest text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-all flex items-center gap-2">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                Agendar
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center overflow-hidden">
+        <!-- Background image -->
+        <img
+            src="imagens/mari_hero.webp"
+            alt="Dra. Mariana Hespanhol, psiquiatra em Sorocaba"
+            class="absolute inset-0 w-full h-full object-cover object-right"
+        />
+
+        <!-- Content over the gradient area -->
+        <div class="relative z-10 w-full px-6 md:px-12 pt-32 pb-16 md:pt-0 md:pb-0">
+            <div class="max-w-7xl mx-auto">
+                <div class="max-w-xl space-y-8">
+                    <div class="inline-block bg-white/70 backdrop-blur-sm text-forest px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-wider">
+                        Mariana Hespanhol · CRM: 222667
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-semibold leading-[1.1] text-deep tracking-tight">
+                        Psiquiatra com atendimento presencial em Sorocaba e online para todo Brasil
+                    </h1>
+                    <p class="text-lg md:text-xl text-deep/70 leading-relaxed">
+                        Escuta ativa, presença real e acompanhamento próximo — para que você se sinta cuidado desde a primeira consulta.
+                    </p>
+                    <div class="space-y-4 pt-2">
+                        <a href="https://wa.me/seunumerodequalquer" target="_blank" class="inline-flex bg-forest text-white px-8 py-4 rounded-xl text-base font-medium hover:bg-opacity-90 transition-all items-center gap-3 shadow-lg shadow-forest/20">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            Agendar consulta pelo WhatsApp
+                        </a>
+                        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-deep/60 font-medium">
+                            <div class="flex items-center gap-1.5 text-deep">
+                                <i data-lucide="star" class="w-4 h-4 fill-gold text-gold"></i>
+                                <span>Avaliações verificadas no Doctoralia</span>
+                            </div>
+                            <span class="hidden md:inline text-deep/30">•</span>
+                            <span>Atendimento particular</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-sm text-deep/60 pt-1">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-forest shrink-0 mt-0.5"></i>
+                            <span>R. José Maria Hanickel, 76 — Sala 81, Sorocaba · Segunda a sexta, das 8h às 18h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principais Quadros Atendidos -->
+    <section id="especialidades" class="py-24 px-6 md:px-12 bg-cream">
+        <div class="max-w-7xl mx-auto">
+            <div class="max-w-3xl mb-16">
+                <div class="inline-block bg-accent text-forest px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-wider mb-6">
+                    Especialidades
+                </div>
+                <h2 class="text-4xl md:text-5xl font-semibold text-deep mb-6 leading-[1.15]">
+                    Cada pessoa que chega aqui tem uma história. E é ela que guia o cuidado.
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Atendimento psiquiátrico para adultos e adolescentes, com o tempo e a atenção que cada caso merece.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-soft rounded-2xl p-6 shadow-soft border border-beige/50 hover:border-sage/30 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-forest text-white flex items-center justify-center mb-5">
+                        <i data-lucide="brain" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-medium text-deep mb-3">Ansiedade e Pânico</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Crises frequentes, preocupação constante, medo sem causa aparente ou ataques de pânico que travam sua rotina.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-soft rounded-2xl p-6 shadow-soft border border-beige/50 hover:border-sage/30 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-forest text-white flex items-center justify-center mb-5">
+                        <i data-lucide="cloud-rain" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-medium text-deep mb-3">Depressão</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Falta de energia, prazer ou motivação que não passa com o tempo — e que já está afetando trabalho, relacionamentos e qualidade de vida.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-soft rounded-2xl p-6 shadow-soft border border-beige/50 hover:border-sage/30 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-forest text-white flex items-center justify-center mb-5">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-medium text-deep mb-3">TDAH</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Dificuldade de foco, impulsividade, procrastinação crônica — em adolescentes e adultos que finalmente querem entender o que acontece.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-soft rounded-2xl p-6 shadow-soft border border-beige/50 hover:border-sage/30 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-forest text-white flex items-center justify-center mb-5">
+                        <i data-lucide="flame" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-medium text-deep mb-3">Burnout</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Esgotamento total por excesso de trabalho ou pressão contínua. Quando descansar já não resolve mais.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="bg-soft rounded-2xl p-6 shadow-soft border border-beige/50 hover:border-sage/30 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-forest text-white flex items-center justify-center mb-5">
+                        <i data-lucide="puzzle" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-medium text-deep mb-3">Autismo (TEA)</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Diagnóstico tardio em adolescentes e adultos — avaliação cuidadosa, sem pressa, com foco na sua realidade.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="bg-soft rounded-2xl p-6 shadow-soft border border-beige/50 hover:border-sage/30 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-forest text-white flex items-center justify-center mb-5">
+                        <i data-lucide="moon" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-medium text-deep mb-3">Transtornos do Sono</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Insônia, sono fragmentado ou hipersônia que afetam seu rendimento e bem-estar no dia a dia.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <a href="https://wa.me/seunumerodequalquer" target="_blank" class="inline-flex bg-transparent border-[1.5px] border-forest text-forest px-8 py-3.5 rounded-xl text-sm font-medium hover:bg-forest hover:text-white transition-all items-center gap-2">
+                    Quero agendar minha consulta
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prova Social -->
+    <section id="prova-social" class="py-24 px-6 md:px-12 bg-soft">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div class="inline-block bg-accent text-forest px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-wider mb-6">
+                    Depoimentos
+                </div>
+                <h2 class="text-4xl md:text-5xl font-semibold text-deep mb-4">O que dizem meus pacientes.</h2>
+                <p class="text-gray-600">Experiências de quem encontrou o cuidado que precisava — e quis compartilhar.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <!-- Depoimento 1 -->
+                <div class="bg-soft border border-beige rounded-2xl p-8 relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex gap-1 mb-6 text-gold">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="italic text-[15px] text-gray-700 leading-relaxed mb-8">
+                            "Finalmente me senti ouvido de verdade. A consulta durou o tempo que precisava, sem aquela sensação de que o médico estava olhando pro relógio."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-sage flex items-center justify-center text-white font-medium text-sm">
+                            MS
+                        </div>
+                        <div class="font-medium text-sm text-deep">M.S., 38 anos</div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="bg-soft border border-beige rounded-2xl p-8 relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex gap-1 mb-6 text-gold">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="italic text-[15px] text-gray-700 leading-relaxed mb-8">
+                            "Fui encaminhada pelo meu psicólogo e foi a melhor decisão que tomei. A Dra. Mariana explicou tudo com calma e me passou confiança desde o primeiro atendimento."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-sage flex items-center justify-center text-white font-medium text-sm">
+                            CL
+                        </div>
+                        <div class="font-medium text-sm text-deep">C.L., 31 anos</div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="bg-soft border border-beige rounded-2xl p-8 relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex gap-1 mb-6 text-gold">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="italic text-[15px] text-gray-700 leading-relaxed mb-8">
+                            "Atendimento humano, sem pressa. Saí da consulta com clareza do que estava acontecendo e do caminho a seguir."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-sage flex items-center justify-center text-white font-medium text-sm">
+                            RT
+                        </div>
+                        <div class="font-medium text-sm text-deep">R.T., 45 anos</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-6">
+                <div class="flex items-center gap-2 text-sm text-gray-500 font-medium">
+                    <i data-lucide="badge-check" class="w-4 h-4 text-forest"></i>
+                    <span>Avaliações verificadas · Doctoralia · Sorocaba e região</span>
+                </div>
+                <a href="https://wa.me/seunumerodequalquer" target="_blank" class="bg-forest text-white px-8 py-3.5 rounded-xl text-sm font-medium hover:bg-opacity-90 transition-all flex items-center gap-2 shadow-sm">
+                    Agendar pelo WhatsApp
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local de Atendimento + Galeria -->
+    <section id="onde-fica" class="py-24 px-6 md:px-12 bg-cream">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            
+            <!-- Esquerda: Grid Mosaico de Fotos -->
+            <div class="grid grid-cols-2 grid-rows-2 gap-4 h-[500px] md:h-[600px]">
+                <img src="imagens/consul01.webp" alt="Recepção da Clínica Mentis" class="rounded-2xl col-span-1 row-span-2 shadow-sm w-full h-full object-cover" />
+                <img src="imagens/consul02.webp" alt="Consultório da Dra. Mariana" class="rounded-2xl col-span-1 row-span-1 shadow-sm w-full h-full object-cover" />
+                <img src="imagens/consul03.webp" alt="Sala de atendimento" class="rounded-2xl col-span-1 row-span-1 shadow-sm w-full h-full object-cover" />
+            </div>
+
+            <!-- Direita: Informações de Contato -->
+            <div class="space-y-10">
+                <div>
+                    <div class="inline-block bg-accent text-forest px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-wider mb-6">
+                        Conheça o consultório
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-semibold text-deep mb-6 leading-tight">Um espaço pensado para você se sentir à vontade.</h2>
+                    <p class="text-lg text-gray-600">O consultório fica dentro da Clínica Mentis, em Sorocaba — fácil acesso, ambiente reservado e acolhedor.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-start">
+                        <div class="w-10 h-10 rounded-lg bg-accent flex items-center justify-center shrink-0">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-forest"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-deep mb-1">Endereço</h4>
+                            <p class="text-gray-600 leading-relaxed text-sm">R. José Maria Hanickel, 76 — Sala 81<br>Jardim Portal da Colina, Sorocaba – SP</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 items-start">
+                        <div class="w-10 h-10 rounded-lg bg-accent flex items-center justify-center shrink-0">
+                            <i data-lucide="calendar" class="w-5 h-5 text-forest"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-deep mb-1">Horários</h4>
+                            <p class="text-gray-600 text-sm">Segunda a sexta · 8h às 18h</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 items-start">
+                        <div class="w-10 h-10 rounded-lg bg-accent flex items-center justify-center shrink-0">
+                            <i data-lucide="monitor-smartphone" class="w-5 h-5 text-forest"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-deep mb-1">Modalidades</h4>
+                            <p class="text-gray-600 text-sm">
+                                <strong>Presencial</strong> — Sorocaba<br>
+                                <strong>Online</strong> — para qualquer cidade
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4">
+                    <a href="https://wa.me/seunumerodequalquer" target="_blank" class="inline-flex bg-forest text-white px-8 py-4 rounded-xl text-sm font-medium hover:bg-opacity-90 transition-all items-center gap-2 shadow-lg shadow-forest/10">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        Verificar disponibilidade
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre a Dra. Mariana -->
+    <section id="sobre" class="py-24 px-6 md:px-12 bg-soft relative">
+        <div class="blob-bg w-[300px] h-[300px] right-[-100px] top-[10%] opacity-30"></div>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-[1fr_1.5fr] gap-16 items-center">
+            
+            <img src="imagens/sobre_mariana.webp" alt="Dra. Mariana Hespanhol" class="order-2 md:order-1 w-full aspect-[4/5] rounded-3xl shadow-xl object-cover object-top" />
+
+            <div class="order-1 md:order-2 space-y-8">
+                <div class="inline-block bg-accent text-forest px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-wider">
+                    Sobre mim
+                </div>
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-semibold text-deep leading-tight">Dra. Mariana Hespanhol</h2>
+                    <p class="text-sage font-medium mt-1">Psiquiatra · CRM-SP: 222667</p>
+                </div>
+
+                <div class="space-y-4 text-gray-600 text-lg leading-relaxed">
+                    <p>
+                        Sou psiquiatra com atendimento voltado para adolescentes e adultos. Muitos dos meus pacientes chegam com uma longa caminhada de sintomas — e o que precisam é de alguém que, de fato, os escute.
+                    </p>
+                    <p>
+                        Cada consulta dura o tempo necessário. Sem respostas prontas, sem roteiros automáticos. A história de cada pessoa é o que guia o tratamento.
+                    </p>
+                    <p>
+                        Atendo presencialmente em Sorocaba, na Clínica Mentis, e também de forma online para quem precisar de flexibilidade.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap gap-3 pt-2">
+                    <div class="bg-cream border border-beige px-4 py-2 rounded-full text-sm font-medium text-deep flex items-center gap-2">
+                        <i data-lucide="graduation-cap" class="w-4 h-4 text-sage"></i>
+                        [Faculdade e Ano]
+                    </div>
+                    <div class="bg-cream border border-beige px-4 py-2 rounded-full text-sm font-medium text-deep flex items-center gap-2">
+                        <i data-lucide="file-text" class="w-4 h-4 text-sage"></i>
+                        CRM-SP: 222667
+                    </div>
+                    <div class="bg-cream border border-beige px-4 py-2 rounded-full text-sm font-medium text-deep flex items-center gap-2">
+                        <i data-lucide="building" class="w-4 h-4 text-sage"></i>
+                        Clínica Mentis — Sorocaba
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <a href="https://wa.me/seunumerodequalquer" target="_blank" class="inline-flex bg-forest text-white px-8 py-4 rounded-xl text-sm font-medium hover:bg-opacity-90 transition-all items-center gap-2 shadow-lg shadow-forest/10">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        Fale comigo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-24 px-6 md:px-12 bg-forest relative overflow-hidden">
+        <div class="absolute w-[600px] h-[600px] bg-white opacity-5 blur-[100px] rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="max-w-3xl mx-auto text-center relative z-10 space-y-8">
+            <div class="inline-block bg-white/10 text-white px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-wider backdrop-blur-sm">
+                Próximo passo
+            </div>
+            <h2 class="text-4xl md:text-5xl font-semibold text-white">Pronto para marcar sua consulta?</h2>
+            <p class="text-lg text-accent/90 max-w-2xl mx-auto">
+                Atendimento presencial em Sorocaba e online para todo Brasil — entre em contato e encontre um horário que funcione para você.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-accent/80 pb-4">
+                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i> Atendimento particular</div>
+                <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i> Presencial ou online</div>
+            </div>
+
+            <div>
+                <a href="https://wa.me/seunumerodequalquer" target="_blank" class="inline-flex bg-white text-forest px-8 py-4 rounded-xl text-base font-semibold hover:bg-soft transition-all items-center gap-3 shadow-2xl">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    Agendar consulta pelo WhatsApp
+                </a>
+            </div>
+            
+            <div class="text-sm text-accent/60 pt-4 flex items-center justify-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+                Sorocaba · Jardim Portal da Colina · Sala 81 · Clínica Mentis
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-cream border-t border-beige py-12 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <div class="font-semibold text-lg text-deep mb-1">Dra. Mariana Hespanhol</div>
+                <div class="text-sm text-gray-500 mb-4">Psiquiatra · CRM SP 222667</div>
+                <p class="text-xs text-gray-400 max-w-md">
+                    Este site tem caráter informativo e não substitui consulta médica. Em caso de emergência, procure o pronto-socorro mais próximo.
+                </p>
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-soft border border-beige flex items-center justify-center text-forest hover:bg-accent transition-colors">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-soft border border-beige flex items-center justify-center text-forest hover:bg-accent transition-colors">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-400 mt-12 pt-6 border-t border-beige/50">
+            <span>&copy; 2026 Dra. Mariana Hespanhol. Todos os direitos reservados.</span>
+            <span>Desenvolvido por <a href="https://www.instagram.com/otaviotrettel/" target="_blank" rel="noopener noreferrer" class="text-forest hover:underline font-medium">Trettel Digital</a></span>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
