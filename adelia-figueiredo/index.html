@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,12 @@
     <title>Adélia Figueiredo — Psicóloga | Psicoterapia para Ansiedade</title>
     <meta name="description"
         content="Psicoterapia especializada em ansiedade. Sessões com foco real em resultados — método TCC + Terapia do Esquema. Atendimento online.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -18,222 +24,202 @@
                         'primary-dark': '#4A6A52',
                         secondary: '#C2956C',
                         'bg-main': '#FAF7F3',
-                        'bg-alt': '#F0EDE8',
+                        'bg-alt': '#FFFFFF',
                         'bg-dark': '#1E2A20',
-                        'text-dark': '#1E2218',
-                        'text-muted': '#6B6B5E',
+                        'text-dark': '#131614',
+                        'text-muted': '#5C6356',
                     },
                     fontFamily: {
-                        heading: ['"Playfair Display"', 'serif'],
+                        heading: ['Outfit', 'sans-serif'],
                         body: ['"DM Sans"', 'sans-serif'],
                     },
                 }
             }
         }
     </script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Glassmorphism utility */
+        .glass {
+            background: rgba(250, 247, 243, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/adelia-figueiredo/css/styles.css">
+        /* Animações suaves de entrada */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-delay-1 { transition-delay: 100ms; }
+        .fade-delay-2 { transition-delay: 200ms; }
+        .fade-delay-3 { transition-delay: 300ms; }
+    </style>
 </head>
 
-<body class="bg-bg-main text-text-dark font-body antialiased">
+<!-- O texto base é de 18px (text-[18px]) conforme solicitado -->
+<body class="bg-bg-main text-text-dark font-body antialiased text-[18px] leading-[1.6]">
 
     <!-- ─── NAV ─── -->
-    <nav class="bg-bg-main border-b border-[#E5E0D8] sticky top-0 z-50 transition-shadow duration-300">
-        <div class="max-w-[1180px] mx-auto px-6 h-[68px] flex items-center justify-between">
-
-            <div class="font-heading text-[1.1rem] font-semibold tracking-[-0.02em] text-text-dark">
+    <nav class="glass border-b border-black/5 fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-[1240px] mx-auto px-6 h-[80px] flex items-center justify-between">
+            <div class="font-heading text-2xl font-semibold tracking-tight text-text-dark">
                 Adélia <span class="text-primary">Figueiredo</span>
             </div>
 
-            <ul class="nav-links flex items-center gap-8 list-none">
-                <li><a href="#para-quem"
-                        class="text-sm font-medium text-text-muted hover:text-primary transition-colors duration-200">Para
-                        quem é</a></li>
-                <li><a href="#abordagem"
-                        class="text-sm font-medium text-text-muted hover:text-primary transition-colors duration-200">Abordagem</a>
-                </li>
-                <li><a href="#sobre"
-                        class="text-sm font-medium text-text-muted hover:text-primary transition-colors duration-200">Sobre</a>
-                </li>
+            <ul class="nav-links hidden lg:flex items-center gap-10 list-none">
+                <li><a href="#para-quem" class="font-medium text-text-muted hover:text-primary transition-colors">Para quem é</a></li>
+                <li><a href="#abordagem" class="font-medium text-text-muted hover:text-primary transition-colors">Abordagem</a></li>
+                <li><a href="#sobre" class="font-medium text-text-muted hover:text-primary transition-colors">Sobre</a></li>
                 <li>
                     <a href="#sessao"
-                        class="bg-primary text-white px-[22px] py-[10px] rounded-md text-[0.8rem] font-semibold tracking-[0.06em] uppercase hover:bg-primary-dark transition-colors duration-200">
+                        class="bg-primary text-white px-8 py-3.5 rounded-full text-[16px] font-semibold tracking-wide hover:bg-primary-dark hover:scale-[1.02] hover:shadow-lg transition-all duration-300 inline-block">
                         Agendar consulta
                     </a>
                 </li>
             </ul>
 
-            <button class="nav-hamburger hidden flex-col gap-[5px] cursor-pointer p-1" aria-label="Menu">
-                <span class="block w-[22px] h-[2px] bg-text-dark transition-all duration-300"></span>
-                <span class="block w-[22px] h-[2px] bg-text-dark transition-all duration-300"></span>
-                <span class="block w-[22px] h-[2px] bg-text-dark transition-all duration-300"></span>
+            <button class="nav-hamburger lg:hidden flex flex-col gap-1.5 cursor-pointer p-2" aria-label="Menu">
+                <span class="block w-6 h-0.5 bg-text-dark transition-all duration-300"></span>
+                <span class="block w-6 h-0.5 bg-text-dark transition-all duration-300"></span>
+                <span class="block w-6 h-0.5 bg-text-dark transition-all duration-300"></span>
             </button>
         </div>
     </nav>
 
     <!-- ─── HERO ─── -->
-    <div class="bg-bg-main">
-        <div
-            class="max-w-[1180px] mx-auto px-6 pt-[100px] pb-20 grid grid-cols-2 gap-20 items-center max-lg:grid-cols-1 max-lg:pt-16 max-lg:pb-16 max-lg:gap-12">
-
-            <!-- Texto -->
-            <div>
-                <div
-                    class="hero-eyebrow inline-flex items-center gap-2 text-[0.75rem] font-medium tracking-[0.1em] uppercase text-primary mb-6">
+    <header class="pt-[140px] pb-24 lg:pt-[180px] lg:pb-32 overflow-hidden">
+        <div class="max-w-[1240px] mx-auto px-6 grid lg:grid-cols-[1fr_1fr] gap-16 lg:gap-20 items-center">
+            
+            <!-- Conteúdo -->
+            <div class="fade-up">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm tracking-wide uppercase mb-6">
+                    <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
                     Adélia Figueiredo | CRP:xxxxx
                 </div>
 
-                <h1
-                    class="font-heading text-[clamp(2.6rem,4.5vw,3.6rem)] font-bold leading-[1.12] tracking-[-0.02em] text-text-dark mb-6">
+                <h1 class="font-heading text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight text-text-dark mb-6">
                     Psicoterapia especializada<br>
-                    <em class="text-primary">em ansiedade.</em>
+                    <span class="text-primary italic font-light">em ansiedade.</span>
                 </h1>
 
-                <p class="text-[1.05rem] leading-[1.75] text-text-muted mb-10 max-w-[460px]">
-                    Sessões com foco real em resultados — não só em conversa. Um processo direto para identificar o que
-                    alimenta sua ansiedade e mudar isso de verdade.
+                <p class="text-text-muted mb-10 max-w-lg text-[20px]">
+                    Sessões com foco real em resultados — não só em conversa. Um processo direto para identificar o que alimenta sua ansiedade e mudar isso de verdade.
                 </p>
 
-                <div class="flex flex-wrap items-center gap-4">
-                    <a href="#sessao"
-                        class="bg-primary text-white px-7 py-[15px] rounded-md text-[0.82rem] font-semibold tracking-[0.07em] uppercase hover:bg-primary-dark hover:-translate-y-px transition-all duration-200 inline-block">
-                        Agendar consulta
+                <div class="flex flex-wrap items-center gap-4 mb-14">
+                    <a href="#sessao" class="bg-primary text-white px-9 py-4 rounded-full font-semibold tracking-wide hover:bg-primary-dark hover:scale-[1.02] hover:shadow-lg transition-all duration-300 inline-block">
+                        Agendar minha consulta
                     </a>
-                    <a href="#abordagem"
-                        class="btn-secondary inline-flex items-center gap-2 text-sm font-medium text-text-dark hover:text-primary transition-colors duration-200">
+                    <a href="#abordagem" class="px-6 py-4 font-medium text-text-dark hover:text-primary transition-colors flex items-center gap-2">
                         Ver como funciona
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
                 </div>
 
-                <div class="flex gap-8 mt-12 pt-9 border-t border-[#E5E0D8] max-sm:gap-6">
-                    <div class="flex flex-col gap-0.5">
-                        <span class="font-heading text-[1.8rem] font-bold text-text-dark leading-none">15+</span>
-                        <span class="text-[0.75rem] text-text-muted">Anos de prática clínica</span>
+                <!-- Credenciais numéricas -->
+                <div class="flex gap-10 pt-8 border-t border-black/5">
+                    <div>
+                        <div class="font-heading text-4xl font-semibold text-text-dark">15+</div>
+                        <div class="text-sm text-text-muted mt-1 font-medium">Anos de prática</div>
                     </div>
-                    <div class="flex flex-col gap-0.5">
-                        <span class="font-heading text-[1.8rem] font-bold text-text-dark leading-none">2</span>
-                        <span class="text-[0.75rem] text-text-muted">Livros publicados</span>
+                    <div>
+                        <div class="font-heading text-4xl font-semibold text-text-dark">2</div>
+                        <div class="text-sm text-text-muted mt-1 font-medium">Livros publicados</div>
                     </div>
-                    <div class="flex flex-col gap-0.5">
-                        <span class="font-heading text-[1.8rem] font-bold text-text-dark leading-none">100%</span>
-                        <span class="text-[0.75rem] text-text-muted">Online</span>
+                    <div>
+                        <div class="font-heading text-4xl font-semibold text-text-dark">100%</div>
+                        <div class="text-sm text-text-muted mt-1 font-medium">Online</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Imagem -->
-            <div class="relative max-lg:order-first">
-                <div class="hero-image-frame w-full aspect-[4/5] overflow-hidden max-lg:aspect-[4/3]">
-                    <img src="/adelia-figueiredo/imagens/adelia-foto02.jpeg" alt="Adélia Figueiredo Psicóloga"
-                        class="w-full h-full object-cover object-top">
-                </div>
-                <div
-                    class="hero-badge absolute bottom-7 -left-6 bg-white px-5 py-3.5 rounded-lg shadow-[0_8px_32px_rgba(0,0,0,0.10)] flex items-center gap-3 whitespace-nowrap max-lg:left-3 max-lg:bottom-4">
-                    <div class="hero-badge-dot w-2.5 h-2.5 rounded-full bg-primary flex-shrink-0"></div>
-                    <div class="text-[0.75rem] font-medium text-text-dark leading-snug">
-                        Agenda disponível agora
-                        <small class="block text-text-muted font-normal mt-0.5">Seg–Sáb · 9h às 21h · Online</small>
+            <!-- Foto Principal -->
+            <div class="relative fade-up fade-delay-1">
+                <img src="imagens/adelia-foto01.jpeg" alt="Adélia Figueiredo" class="w-full h-[600px] object-cover rounded-[2.5rem] shadow-xl">
+                <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md px-6 py-4 rounded-3xl shadow-lg border border-white/20 flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-text-dark text-[15px]">Atendimento exclusivo</div>
+                        <div class="text-sm text-text-muted">Particular · Online</div>
                     </div>
                 </div>
             </div>
+
         </div>
-    </div>
+    </header>
 
-    <!-- ─── PARA QUEM É ─── -->
-    <section class="bg-bg-alt py-24 max-sm:py-[72px]" id="para-quem">
-        <div class="max-w-[1180px] mx-auto px-6">
-
-            <div class="mb-16">
-                <div
-                    class="section-label inline-flex items-center gap-2 text-[0.72rem] font-semibold tracking-[0.12em] uppercase text-secondary mb-4">
-                    Para quem é
-                </div>
-                <h2
-                    class="font-heading text-[clamp(2rem,3.5vw,2.8rem)] font-bold leading-[1.18] tracking-[-0.02em] text-text-dark fade-up">
-                    Você se reconhece<br>em algum desses padrões?
+    <!-- ─── BENTO GRID: PARA QUEM É ─── -->
+    <section class="py-24 lg:py-32 bg-bg-alt" id="para-quem">
+        <div class="max-w-[1240px] mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
+                <div class="text-secondary font-semibold tracking-widest uppercase text-sm mb-4">Para quem é</div>
+                <h2 class="font-heading text-4xl lg:text-5xl font-semibold text-text-dark mb-6 tracking-tight">
+                    Você se reconhece em algum desses padrões?
                 </h2>
-                <p class="text-[1rem] leading-[1.75] text-text-muted max-w-[540px] mt-4 fade-up fade-up-delay-1">
-                    A ansiedade muda de forma — mas a origem costuma ser a mesma. E isso tem solução.
-                </p>
+                <p class="text-text-muted">A ansiedade muda de forma — mas a origem costuma ser a mesma. E isso tem solução.</p>
             </div>
 
-            <div class="grid grid-cols-3 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1">
-
-                <div class="bg-white rounded-2xl p-8 fade-up">
-                    <div class="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center mb-5">
-                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="1.6"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M9.663 17h4.673M12 3a6 6 0 0 1 6 6c0 2.04-.81 3.89-2.13 5.25A3.5 3.5 0 0 0 14.5 17h-5a3.5 3.5 0 0 0-1.37-2.75A6 6 0 0 1 6 9a6 6 0 0 1 6-6Z" />
-                        </svg>
+            <!-- Bento Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[minmax(200px,auto)]">
+                
+                <!-- Card 1 -->
+                <div class="bg-bg-main rounded-[2rem] p-8 lg:p-10 shadow-sm border border-black/5 hover:shadow-md transition-shadow fade-up">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                        <span class="text-primary font-heading font-semibold text-xl">1</span>
                     </div>
-                    <p class="text-[0.9rem] leading-[1.75] text-text-muted">Pensamentos em loop, preocupações com o que
-                        ainda não aconteceu. O dia termina e a cabeça continua trabalhando.</p>
+                    <p class="text-text-dark font-medium leading-relaxed">Pensamentos em loop, preocupações com o que ainda não aconteceu. O dia termina e a cabeça continua trabalhando.</p>
                 </div>
 
-                <div class="bg-white rounded-2xl p-8 fade-up fade-up-delay-1">
-                    <div class="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center mb-5">
-                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="1.6"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
-                        </svg>
-                    </div>
-                    <p class="text-[0.9rem] leading-[1.75] text-text-muted">Uma sensação constante de que algo pode dar
-                        errado. Mesmo quando tudo está bem, o corpo não acredita.</p>
+                <!-- Foto Centro -->
+                <div class="hidden lg:block bg-bg-main rounded-[2rem] overflow-hidden shadow-sm lg:row-span-2 relative fade-up fade-delay-1">
+                    <img src="imagens/aniseadede.webp" alt="Terapia" class="w-full h-full object-cover">
                 </div>
 
-                <div class="bg-white rounded-2xl p-8 fade-up fade-up-delay-2">
-                    <div class="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center mb-5">
-                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="1.6"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
-                        </svg>
+                <!-- Card 2 -->
+                <div class="bg-bg-main rounded-[2rem] p-8 lg:p-10 shadow-sm border border-black/5 hover:shadow-md transition-shadow fade-up fade-delay-2">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                        <span class="text-primary font-heading font-semibold text-xl">2</span>
                     </div>
-                    <p class="text-[0.9rem] leading-[1.75] text-text-muted">Compromissos adiados, conversas evitadas,
-                        lugares que geram desconforto. A lista do que você evita só cresce.</p>
+                    <p class="text-text-dark font-medium leading-relaxed">Uma sensação constante de que algo pode dar errado. Mesmo quando tudo está bem, o corpo não acredita.</p>
                 </div>
 
-                <div class="bg-white rounded-2xl p-8 fade-up fade-up-delay-1">
-                    <div class="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center mb-5">
-                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="1.6"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
-                        </svg>
+                <!-- Card 3 -->
+                <div class="bg-bg-main rounded-[2rem] p-8 lg:p-10 shadow-sm border border-black/5 hover:shadow-md transition-shadow fade-up">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                        <span class="text-primary font-heading font-semibold text-xl">3</span>
                     </div>
-                    <p class="text-[0.9rem] leading-[1.75] text-text-muted">Você entende o que está acontecendo, mas
-                        continua repetindo. Não é falta de força — tem uma razão para isso.</p>
+                    <p class="text-text-dark font-medium leading-relaxed">Compromissos adiados, conversas evitadas, lugares que geram desconforto. A lista do que você evita só cresce.</p>
                 </div>
 
-                <div class="bg-white rounded-2xl p-8 fade-up fade-up-delay-2">
-                    <div class="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center mb-5">
-                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="1.6"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M3.75 18h15A2.25 2.25 0 0 0 21 15.75v-6a2.25 2.25 0 0 0-2.25-2.25h-15A2.25 2.25 0 0 0 1.5 9.75v6A2.25 2.25 0 0 0 3.75 18Z" />
-                        </svg>
+                <!-- Card 4 -->
+                <div class="bg-bg-main rounded-[2rem] p-8 lg:p-10 shadow-sm border border-black/5 hover:shadow-md transition-shadow fade-up fade-delay-2">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                        <span class="text-primary font-heading font-semibold text-xl">4</span>
                     </div>
-                    <p class="text-[0.9rem] leading-[1.75] text-text-muted">Não é cansaço físico. É o custo de carregar
-                        uma ansiedade que drena energia antes mesmo do dia começar.</p>
+                    <p class="text-text-dark font-medium leading-relaxed">Você entende o que está acontecendo, mas continua repetindo. Não é falta de força — tem uma razão para isso.</p>
                 </div>
 
-                <div class="bg-white rounded-2xl p-8 fade-up fade-up-delay-3">
-                    <div class="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center mb-5">
-                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="1.6"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
-                        </svg>
+                <!-- Card 5 -->
+                <div class="bg-primary text-white rounded-[2rem] p-8 lg:p-10 shadow-md md:col-span-2 lg:col-span-3 fade-up">
+                    <div class="flex flex-col md:flex-row gap-8 items-center justify-between h-full">
+                        <p class="font-medium leading-relaxed text-xl">
+                            "Não é cansaço físico. É o custo de carregar uma ansiedade que drena energia antes mesmo do dia começar. O objetivo aqui não é só desabafar, é <strong class="font-semibold">sair com clareza do que muda e como muda.</strong>"
+                        </p>
+                        <a href="#sessao" class="bg-white text-primary px-8 py-4 rounded-full font-semibold whitespace-nowrap hover:bg-bg-alt transition-colors">
+                            Começar agora
+                        </a>
                     </div>
-                    <p class="text-[0.9rem] leading-[1.75] text-text-muted">Não só desabafar — mas sair da sessão com
-                        clareza do que muda, como muda e o que levar para o dia a dia.</p>
                 </div>
 
             </div>
@@ -241,258 +227,249 @@
     </section>
 
     <!-- ─── DEPOIMENTOS ─── -->
-    <section class="bg-bg-main py-24 max-sm:py-[72px]" id="depoimentos">
-        <div class="max-w-[1180px] mx-auto px-6">
-
-            <div class="flex justify-between items-end mb-14 gap-6 max-lg:flex-col max-lg:items-start">
-                <div>
-                    <div
-                        class="section-label inline-flex items-center gap-2 text-[0.72rem] font-semibold tracking-[0.12em] uppercase text-secondary mb-4">
-                        Depoimentos
-                    </div>
-                    <h2
-                        class="font-heading text-[clamp(2rem,3.5vw,2.8rem)] font-bold leading-[1.18] tracking-[-0.02em] text-text-dark fade-up">
+    <section class="py-24 lg:py-32 bg-bg-main" id="depoimentos">
+        <div class="max-w-[1240px] mx-auto px-6">
+            
+            <div class="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
+                <div class="fade-up">
+                    <div class="text-secondary font-semibold tracking-widest uppercase text-sm mb-4">Depoimentos</div>
+                    <h2 class="font-heading text-4xl lg:text-5xl font-semibold text-text-dark tracking-tight">
                         O que minhas pacientes<br>dizem na prática.
                     </h2>
                 </div>
-                <div class="flex items-center gap-2 text-[0.8rem] text-text-muted whitespace-nowrap fade-up">
-                    <span class="text-secondary text-[0.9rem] tracking-[1px]">★★★★★</span>
-                    <span>Avaliações verificadas no Google</span>
+                <div class="flex items-center gap-3 bg-white px-5 py-3 rounded-full shadow-sm border border-black/5 fade-up">
+                    <span class="text-[#FFC107] text-xl">★★★★★</span>
+                    <span class="text-sm font-medium">Avaliações verificadas</span>
                 </div>
             </div>
 
-            <div class="grid grid-cols-3 gap-6 max-lg:grid-cols-1">
-                <div
-                    class="bg-bg-alt p-9 rounded-sm border-l-[3px] border-primary hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.07)] transition-all duration-200 fade-up">
-                    <div class="text-secondary text-[0.85rem] tracking-[2px] mb-5">★★★★★</div>
-                    <p class="font-heading text-[1.05rem] leading-[1.65] text-text-dark mb-7 italic">
-                        "Consegui ir a uma reunião sem entrar em crise pela primeira vez em anos. A Adélia me ajudou a
-                        entender de onde vinha aquele medo — e isso mudou tudo."
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="bg-white p-10 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-black/5 hover:-translate-y-1 transition-transform fade-up">
+                    <div class="text-[#FFC107] text-lg mb-6">★★★★★</div>
+                    <p class="text-text-dark italic mb-8 leading-relaxed">
+                        "Consegui ir a uma reunião sem entrar em crise pela primeira vez em anos. A Adélia me ajudou a entender de onde vinha aquele medo — e isso mudou tudo."
                     </p>
-                    <div class="text-[0.8rem] font-semibold text-text-dark tracking-[0.04em] uppercase">M. S.</div>
-                    <div class="text-[0.75rem] text-text-muted mt-0.5">Paciente há 8 meses · Ansiedade social</div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary font-semibold">M</div>
+                        <div>
+                            <div class="font-semibold text-text-dark">M. S.</div>
+                            <div class="text-sm text-text-muted">Ansiedade social</div>
+                        </div>
+                    </div>
                 </div>
-                <div
-                    class="bg-bg-alt p-9 rounded-sm border-l-[3px] border-primary hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.07)] transition-all duration-200 fade-up fade-up-delay-2">
-                    <div class="text-secondary text-[0.85rem] tracking-[2px] mb-5">★★★★★</div>
-                    <p class="font-heading text-[1.05rem] leading-[1.65] text-text-dark mb-7 italic">
-                        "Eu sabia o que estava acontecendo comigo, mas não conseguia parar. Com o método dela, entendi o
-                        padrão e finalmente consegui quebrá-lo no dia a dia."
+
+                <!-- Depoimento 2 -->
+                <div class="bg-white p-10 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-black/5 hover:-translate-y-1 transition-transform fade-up fade-delay-1">
+                    <div class="text-[#FFC107] text-lg mb-6">★★★★★</div>
+                    <p class="text-text-dark italic mb-8 leading-relaxed">
+                        "Eu sabia o que estava acontecendo comigo, mas não conseguia parar. Com o método dela, entendi o padrão e finalmente consegui quebrá-lo no dia a dia."
                     </p>
-                    <div class="text-[0.8rem] font-semibold text-text-dark tracking-[0.04em] uppercase">C. R.</div>
-                    <div class="text-[0.75rem] text-text-muted mt-0.5">Paciente há 1 ano · Ciclos repetitivos</div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary font-semibold">C</div>
+                        <div>
+                            <div class="font-semibold text-text-dark">C. R.</div>
+                            <div class="text-sm text-text-muted">Ciclos repetitivos</div>
+                        </div>
+                    </div>
                 </div>
-                <div
-                    class="bg-bg-alt p-9 rounded-sm border-l-[3px] border-primary hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.07)] transition-all duration-200 fade-up fade-up-delay-3">
-                    <div class="text-secondary text-[0.85rem] tracking-[2px] mb-5">★★★★★</div>
-                    <p class="font-heading text-[1.05rem] leading-[1.65] text-text-dark mb-7 italic">
-                        "A abordagem é diferente de tudo que já fiz. Cada sessão termina com algo concreto para aplicar
-                        — não só conversa. Em 3 meses mudei perspectivas que carregava há anos."
+
+                <!-- Depoimento 3 -->
+                <div class="bg-white p-10 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-black/5 hover:-translate-y-1 transition-transform fade-up fade-delay-2">
+                    <div class="text-[#FFC107] text-lg mb-6">★★★★★</div>
+                    <p class="text-text-dark italic mb-8 leading-relaxed">
+                        "A abordagem é diferente de tudo que já fiz. Cada sessão termina com algo concreto para aplicar — não só conversa. Em 3 meses mudei perspectivas."
                     </p>
-                    <div class="text-[0.8rem] font-semibold text-text-dark tracking-[0.04em] uppercase">L. A.</div>
-                    <div class="text-[0.75rem] text-text-muted mt-0.5">Paciente há 4 meses · Cansaço emocional</div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary font-semibold">L</div>
+                        <div>
+                            <div class="font-semibold text-text-dark">L. A.</div>
+                            <div class="text-sm text-text-muted">Cansaço emocional</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="mt-12 text-center fade-up fade-up-delay-3">
-                <a href="#sessao"
-                    class="bg-primary text-white px-7 py-[15px] rounded-md text-[0.82rem] font-semibold tracking-[0.07em] uppercase hover:bg-primary-dark hover:-translate-y-px transition-all duration-200 inline-block">
-                    Agendar minha consulta
-                </a>
-            </div>
         </div>
     </section>
 
     <!-- ─── ABORDAGEM ─── -->
-    <section class="bg-bg-dark py-24 max-sm:py-[72px]" id="abordagem">
-        <div class="max-w-[1180px] mx-auto px-6">
-
-            <div class="grid grid-cols-2 gap-20 items-center mb-[72px] max-lg:grid-cols-1 max-lg:gap-10">
-                <div>
-                    <div
-                        class="section-label inline-flex items-center gap-2 text-[0.72rem] font-semibold tracking-[0.12em] uppercase text-secondary mb-4">
-                        Abordagem TCC
+    <section class="py-24 lg:py-32 bg-bg-alt" id="abordagem">
+        <div class="max-w-[1240px] mx-auto px-6">
+            
+            <div class="grid lg:grid-cols-[5fr_7fr] gap-16 lg:gap-24 items-center">
+                
+                <!-- Foto Esquerda -->
+                <div class="relative w-full h-[500px] lg:h-[700px] fade-up">
+                    <img src="imagens/adelia-foto03.jpeg" alt="Terapia Cognitivo Comportamental"
+                         class="w-full h-full object-cover rounded-[2.5rem] shadow-xl">
+                    <!-- Badge Flutuante -->
+                    <div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 lg:p-8 rounded-[2rem] shadow-xl max-w-[240px] hidden lg:block">
+                    <div class="font-heading text-3xl font-semibold mb-2">TCC</div>
+                        <div class="text-sm opacity-90 leading-relaxed">Terapia Cognitivo Comportamental & Terapia do Esquema.</div>
                     </div>
-                    <h2
-                        class="font-heading text-[clamp(2rem,3.5vw,2.8rem)] font-bold leading-[1.18] tracking-[-0.02em] text-[#F9F6F1] fade-up">
+                </div>
+
+                <!-- Conteúdo Direita -->
+                <div class="fade-up fade-delay-1">
+                    <div class="text-secondary font-semibold tracking-widest uppercase text-sm mb-4">Abordagem</div>
+                    <h2 class="font-heading text-4xl lg:text-5xl font-semibold text-text-dark tracking-tight mb-6">
                         A ciência por trás<br>de resultados concretos.
                     </h2>
-                </div>
-                <p
-                    class="text-[1rem] leading-[1.75] text-[rgba(249,246,241,0.6)] max-w-[540px] fade-up fade-up-delay-1">
-                    A Terapia Cognitivo-Comportamental combinada com a Terapia do Esquema não é só conversa — é método.
-                    Cada sessão segue uma direção clara.
-                </p>
-            </div>
+                    <p class="text-text-muted mb-12">
+                        A Terapia Cognitivo-Comportamental combinada com a Terapia do Esquema não é só conversa — é método. Cada sessão segue uma direção clara.
+                    </p>
 
-            <div class="grid grid-cols-4 gap-px bg-[rgba(255,255,255,0.06)] max-lg:grid-cols-2 max-sm:grid-cols-1">
-                <div
-                    class="approach-step relative bg-bg-dark p-9 hover:bg-[rgba(255,255,255,0.03)] transition-colors duration-200 fade-up">
-                    <div class="font-heading text-[2.5rem] font-bold text-[rgba(255,255,255,0.12)] leading-none mb-5">01
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <div class="w-14 h-14 bg-bg-main rounded-full flex items-center justify-center flex-shrink-0 text-primary font-heading text-xl font-semibold shadow-sm">01</div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-text-dark mb-2">Mapeamento</h3>
+                                <p class="text-text-muted">Identificamos os pensamentos automáticos e as crenças que formam os padrões disfuncionais. Não o sintoma — a raiz.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="w-14 h-14 bg-bg-main rounded-full flex items-center justify-center flex-shrink-0 text-primary font-heading text-xl font-semibold shadow-sm">02</div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-text-dark mb-2">Questionamento</h3>
+                                <p class="text-text-muted">Examinamos juntas se esses pensamentos são fatos ou interpretações. Essa distinção muda tudo no seu corpo.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="w-14 h-14 bg-bg-main rounded-full flex items-center justify-center flex-shrink-0 text-primary font-heading text-xl font-semibold shadow-sm">03</div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-text-dark mb-2">Ação</h3>
+                                <p class="text-text-muted">Trabalhamos com comportamentos práticos para aplicar imediatamente — cada sessão tem algo concreto para levar.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-[0.9rem] font-semibold text-[#F9F6F1] mb-3 tracking-[0.04em] uppercase">Mapeamento
-                    </div>
-                    <p class="text-[0.85rem] leading-[1.7] text-[rgba(249,246,241,0.55)]">Identificamos os pensamentos
-                        automáticos e as crenças que formam os padrões disfuncionais. Não o sintoma — a raiz.</p>
+
                 </div>
-                <div
-                    class="approach-step relative bg-bg-dark p-9 hover:bg-[rgba(255,255,255,0.03)] transition-colors duration-200 fade-up fade-up-delay-1">
-                    <div class="font-heading text-[2.5rem] font-bold text-[rgba(255,255,255,0.12)] leading-none mb-5">02
-                    </div>
-                    <div class="text-[0.9rem] font-semibold text-[#F9F6F1] mb-3 tracking-[0.04em] uppercase">
-                        Questionamento</div>
-                    <p class="text-[0.85rem] leading-[1.7] text-[rgba(249,246,241,0.55)]">Examinamos juntas se esses
-                        pensamentos são fatos ou interpretações. Essa distinção muda tudo.</p>
-                </div>
-                <div
-                    class="approach-step relative bg-bg-dark p-9 hover:bg-[rgba(255,255,255,0.03)] transition-colors duration-200 fade-up fade-up-delay-2">
-                    <div class="font-heading text-[2.5rem] font-bold text-[rgba(255,255,255,0.12)] leading-none mb-5">03
-                    </div>
-                    <div class="text-[0.9rem] font-semibold text-[#F9F6F1] mb-3 tracking-[0.04em] uppercase">Ação</div>
-                    <p class="text-[0.85rem] leading-[1.7] text-[rgba(249,246,241,0.55)]">Trabalhamos com comportamentos
-                        práticos para aplicar imediatamente — cada sessão tem algo concreto para levar.</p>
-                </div>
-                <div
-                    class="approach-step relative bg-bg-dark p-9 hover:bg-[rgba(255,255,255,0.03)] transition-colors duration-200 fade-up fade-up-delay-3">
-                    <div class="font-heading text-[2.5rem] font-bold text-[rgba(255,255,255,0.12)] leading-none mb-5">04
-                    </div>
-                    <div class="text-[0.9rem] font-semibold text-[#F9F6F1] mb-3 tracking-[0.04em] uppercase">
-                        Consolidação</div>
-                    <p class="text-[0.85rem] leading-[1.7] text-[rgba(249,246,241,0.55)]">Com o tempo, os novos padrões
-                        substituem os antigos. Você não precisa mais tentar — simplesmente não se sente assim.</p>
-                </div>
+
             </div>
         </div>
     </section>
 
     <!-- ─── SOBRE ─── -->
-    <section class="bg-bg-alt py-24 max-sm:py-[72px]" id="sobre">
-        <div class="max-w-[1180px] mx-auto px-6">
-            <div class="grid grid-cols-[5fr_7fr] gap-20 items-start max-lg:grid-cols-1 max-lg:gap-12">
-
-                <!-- Imagem -->
-                <div class="fade-up">
-                    <div
-                        class="about-image-frame w-full aspect-[3/4] overflow-hidden max-lg:aspect-[4/3] max-lg:max-w-[400px]">
-                        <img src="/adelia-figueiredo/imagens/adelia-foto03.jpeg" alt="Adélia Figueiredo"
-                            class="w-full h-full object-cover object-top">
-                    </div>
-                </div>
+    <section class="py-24 lg:py-32 bg-bg-main" id="sobre">
+        <div class="max-w-[1240px] mx-auto px-6">
+            <div class="grid lg:grid-cols-[1fr_1fr] gap-16 lg:gap-24 items-center">
 
                 <!-- Conteúdo -->
-                <div class="pt-2">
-                    <div
-                        class="section-label inline-flex items-center gap-2 text-[0.72rem] font-semibold tracking-[0.12em] uppercase text-secondary mb-4 fade-up">
-                        Sobre
-                    </div>
-                    <h2
-                        class="font-heading text-[clamp(1.7rem,2.5vw,2.1rem)] font-bold leading-[1.2] tracking-[-0.02em] text-text-dark mb-6 fade-up fade-up-delay-1">
+                <div class="order-2 lg:order-1 fade-up">
+                    <div class="text-secondary font-semibold tracking-widest uppercase text-sm mb-4">Sobre</div>
+                    <h2 class="font-heading text-4xl lg:text-5xl font-semibold text-text-dark tracking-tight mb-8">
                         15 anos cuidando de quem carrega demais.
                     </h2>
-                    <p class="text-[1rem] leading-[1.8] text-text-muted mb-8 fade-up fade-up-delay-2">
-                        Gaúcha de raiz, com escuta formada na vida real e especialização consolidada na psicologia
-                        clínica. Ao longo de mais de 15 anos de prática, aprendi que ansiedade tem origem — e que
-                        entender essa origem é o primeiro passo para mudar de verdade.
+                    <p class="text-text-muted mb-8 leading-relaxed">
+                        Gaúcha de raiz, com escuta formada na vida real e especialização consolidada na psicologia clínica. Ao longo de mais de 15 anos de prática, aprendi que ansiedade tem origem — e que entender essa origem é o primeiro passo para mudar de verdade.
                     </p>
 
-                    <ul class="flex flex-col gap-4 mb-10 fade-up fade-up-delay-2">
+                    <ul class="space-y-4 mb-10">
                         <li class="flex items-start gap-3">
-                            <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-[0.45rem]"></span>
-                            <span class="text-[0.95rem] text-text-dark leading-[1.65]"><strong
-                                    class="font-semibold">Especialização exclusiva</strong> em ansiedade e ansiedade
-                                social — não é uma área entre muitas, é o único foco.</span>
+                            <svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-text-dark"><strong class="font-semibold">Especialização exclusiva</strong> em ansiedade e ansiedade social — não é uma área entre muitas, é o único foco.</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-[0.45rem]"></span>
-                            <span class="text-[0.95rem] text-text-dark leading-[1.65]"><strong
-                                    class="font-semibold">Método TCC + Terapia do Esquema</strong> — combinação que vai
-                                à raiz dos padrões e os modifica de forma duradoura.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-[0.45rem]"></span>
-                            <span class="text-[0.95rem] text-text-dark leading-[1.65]"><strong
-                                    class="font-semibold">Mais de 15 anos de prática clínica</strong> com pessoas em
-                                diferentes fases e contextos de vida.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-[0.45rem]"></span>
-                            <span class="text-[0.95rem] text-text-dark leading-[1.65]"><strong
-                                    class="font-semibold">Autora de dois livros</strong> sobre psicologia aplicada —
-                                conhecimento que vai além do consultório.</span>
+                            <svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-text-dark"><strong class="font-semibold">Método TCC + Terapia do Esquema</strong> — combinação que vai à raiz dos padrões e os modifica de forma duradoura.</span>
                         </li>
                     </ul>
 
-                    <div class="grid grid-cols-2 gap-4 mb-10 max-sm:grid-cols-1 fade-up fade-up-delay-3">
-                        <div class="bg-white p-5 rounded-md border-l-[3px] border-secondary">
-                            <div class="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-secondary mb-2">
-                                Livro publicado</div>
-                            <div class="text-[0.82rem] font-medium text-text-dark leading-[1.4]">Mulheres Maduras:
-                                Entendendo o Envelhecimento</div>
+                    <!-- Livros (Cards Clean) -->
+                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                        <div class="bg-white p-6 rounded-2xl border border-black/5 flex-1 shadow-sm">
+                            <div class="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                            </div>
+                            <div class="font-semibold text-text-dark text-base">Mulheres Maduras: Entendendo o Envelhecimento</div>
                         </div>
-                        <div class="bg-white p-5 rounded-md border-l-[3px] border-secondary">
-                            <div class="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-secondary mb-2">
-                                Livro publicado</div>
-                            <div class="text-[0.82rem] font-medium text-text-dark leading-[1.4]">Questões Psicológicas
-                                que Impedem o Crescimento Pessoal das Mulheres</div>
+                        <div class="bg-white p-6 rounded-2xl border border-black/5 flex-1 shadow-sm">
+                            <div class="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                            </div>
+                            <div class="font-semibold text-text-dark text-base">Questões Psicológicas e o Crescimento Pessoal</div>
                         </div>
                     </div>
-
-                    <a href="#sessao"
-                        class="bg-primary text-white px-7 py-[15px] rounded-md text-[0.82rem] font-semibold tracking-[0.07em] uppercase hover:bg-primary-dark hover:-translate-y-px transition-all duration-200 inline-block fade-up fade-up-delay-4">
-                        Agendar minha consulta
-                    </a>
                 </div>
+
+                <!-- Foto -->
+                <div class="order-1 lg:order-2 fade-up fade-delay-1">
+                    <img src="imagens/adelia-foto05.jpeg" alt="Psicóloga Adélia" class="w-full h-[500px] lg:h-[600px] object-cover rounded-[2.5rem] shadow-xl">
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- ─── CTA FINAL ─── -->
-    <section class="bg-primary py-28 max-sm:py-[72px]" id="sessao">
-        <div class="max-w-[1180px] mx-auto px-6 text-center">
-            <div
-                class="text-[0.72rem] font-semibold tracking-[0.14em] uppercase text-[rgba(255,255,255,0.65)] mb-5 fade-up">
-                Pronto para começar
-            </div>
-            <h2
-                class="font-heading text-[clamp(2.2rem,4vw,3.2rem)] font-bold leading-[1.15] tracking-[-0.02em] text-white mb-4 fade-up fade-up-delay-1">
-                Seu processo começa<br>
-                <em class="opacity-80">com uma conversa.</em>
+    <section class="py-32 bg-primary relative overflow-hidden" id="sessao">
+        <!-- Elementos gráficos de fundo (Círculos suaves) -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+            <div class="absolute -top-[50%] -left-[10%] w-[800px] h-[800px] bg-primary-dark/30 rounded-full blur-[100px]"></div>
+            <div class="absolute -bottom-[50%] -right-[10%] w-[600px] h-[600px] bg-white/5 rounded-full blur-[80px]"></div>
+        </div>
+
+        <div class="max-w-[800px] mx-auto px-6 text-center relative z-10">
+            <div class="text-white/80 font-semibold tracking-widest uppercase text-sm mb-6 fade-up">Pronto para começar</div>
+            <h2 class="font-heading text-5xl lg:text-6xl font-semibold text-white tracking-tight mb-8 fade-up fade-delay-1">
+                Seu processo começa<br>com uma conversa.
             </h2>
-            <p
-                class="text-[1rem] text-[rgba(255,255,255,0.72)] mb-12 max-w-[460px] mx-auto leading-[1.7] fade-up fade-up-delay-2">
-                Uma consulta para entender o que está acontecendo e traçar um caminho claro. Atendimento online, com
-                hora marcada.
+            <p class="text-xl text-white/80 mb-12 leading-relaxed fade-up fade-delay-2">
+                Uma consulta para entender o que está acontecendo e traçar um caminho claro. Atendimento online, com hora marcada.
             </p>
-            <a href="https://wa.me/55SEUNUMERO?text=Olá%20Adélia%2C%20gostaria%20de%20agendar%20uma%20consulta."
-                class="bg-white text-primary px-9 py-[17px] rounded-md text-[0.82rem] font-bold tracking-[0.07em] uppercase hover:bg-bg-alt hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.18)] transition-all duration-200 inline-block shadow-[0_4px_24px_rgba(0,0,0,0.12)] fade-up fade-up-delay-3"
-                target="_blank" rel="noopener">
-                Agendar minha consulta
-            </a>
-            <p class="mt-6 text-[0.8rem] text-[rgba(255,255,255,0.5)] fade-up fade-up-delay-4">
+            <div class="fade-up fade-delay-3">
+                <a href="https://wa.me/55SEUNUMERO?text=Olá%20Adélia%2C%20gostaria%20de%20agendar%20uma%20consulta."
+                    class="bg-white text-primary px-12 py-5 rounded-full text-lg font-semibold tracking-wide hover:bg-bg-main hover:scale-[1.03] hover:shadow-[0_10px_40px_rgba(0,0,0,0.2)] transition-all duration-300 inline-block"
+                    target="_blank" rel="noopener">
+                    Agendar minha consulta
+                </a>
+            </div>
+            <p class="mt-8 text-sm text-white/60 fade-up fade-delay-3">
                 Atendimento online · Segunda a sábado, 9h–21h
             </p>
         </div>
     </section>
 
     <!-- ─── FOOTER ─── -->
-    <footer class="bg-bg-dark py-12 px-6">
-        <div
-            class="max-w-[1180px] mx-auto flex justify-between items-center gap-6 flex-wrap max-lg:flex-col max-lg:text-center">
-            <div class="font-heading text-[1rem] font-semibold text-[#F9F6F1]">
+    <footer class="bg-bg-dark py-12 border-t border-white/10">
+        <div class="max-w-[1240px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+            <div class="font-heading text-2xl font-semibold tracking-tight text-white">
                 Adélia <span class="text-primary">Figueiredo</span>
             </div>
-            <div class="text-[0.78rem] text-[rgba(249,246,241,0.4)] leading-[1.6] text-center">
+            <div class="text-white/50 text-[15px] leading-relaxed">
                 Psicóloga · CRP XX/XXXXX<br>
                 Atendimento online · Particular
             </div>
-            <div class="text-[0.78rem] text-[rgba(249,246,241,0.4)] leading-[1.6] text-right max-lg:text-center">
+            <div class="text-white/40 text-[14px]">
                 © 2025 Adélia Figueiredo<br>
                 Todos os direitos reservados
             </div>
         </div>
     </footer>
 
-    <script src="/adelia-figueiredo/js/script.js"></script>
-</body>
+    <!-- Script para animação de scroll suave (Fade Up) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
 
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-up').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
 </html>
