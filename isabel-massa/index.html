@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Isabel Massa - Psicóloga especializada em ansiedade e regulação emocional. Atendimento online para todo o Brasil.">
+  <title>Isabel Massa | Psicóloga Especializada em Ansiedade</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#7A8F7B',
+            'primary-hover': '#6a7f6b',
+            'pink-light': '#E8DDD1',
+            beige: '#F7F3EE',
+            neutral: '#2F2A27',
+            'neutral-light': '#6b6460',
+          },
+          fontFamily: {
+            heading: ['Lora', 'serif'],
+            body: ['Nunito', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-body text-neutral bg-beige antialiased selection:bg-primary selection:text-white">
+
+  <!-- Header / Nav -->
+  <header class="fixed w-full top-0 z-50 transition-all duration-300" id="header">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div>
+        <div class="font-heading text-xl font-semibold text-neutral">Isabel Massa</div>
+        <div class="text-xs text-neutral-light font-medium tracking-wide">Psicóloga Clínica | CRP 01/27247</div>
+      </div>
+      <a href="#agendar" class="hidden md:inline-block bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-primary-hover transition-colors shadow-sm">
+        Agende uma sessão
+      </a>
+    </div>
+  </header>
+
+  <!-- 1. HERO -->
+  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-[#E8DDD1]">
+    <div class="max-w-6xl mx-auto px-6 relative z-10 fade-up-section">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Coluna de Texto -->
+        <div class="text-left">
+          <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-medium leading-tight mb-6 text-neutral">
+            Supere a <span class="text-primary italic">ansiedade</span> com acompanhamento psicológico especializado
+          </h1>
+          <p class="text-lg md:text-xl text-neutral-light mb-10 max-w-xl leading-relaxed">
+            Pensamentos que não param, sensação constante de que algo ruim vai acontecer e o cansaço de viver em estado de alerta – isso não precisa ser o seu normal.
+          </p>
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <a href="#agendar" class="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-hover transition-transform hover:-translate-y-1 shadow-lg shadow-primary/30 w-full sm:w-auto">
+              Agende uma sessão
+              <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+            </a>
+            <a href="#abordagem" class="inline-flex items-center justify-center bg-white/60 text-neutral px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-colors shadow-sm w-full sm:w-auto">
+              Como funciona
+            </a>
+          </div>
+          <p class="text-sm text-neutral-light mt-6 flex items-center gap-2">
+            <i data-lucide="check-circle" class="w-4 h-4 text-primary"></i>
+            Isabel Massa - Psicóloga especializada em ansiedade
+          </p>
+        </div>
+
+        <!-- Coluna da Imagem -->
+        <div class="relative mt-10 md:mt-0 flex justify-center md:justify-end">
+          <div class="relative w-full max-w-md">
+            <!-- Imagem Principal -->
+            <img src="imagens/hero-isabel.jpg" alt="Isabel Massa - Psicóloga" class="w-full h-auto rounded-[2rem] shadow-2xl object-cover aspect-[4/5] z-10 relative border-4 border-white/60">
+            
+            <!-- Badge Superior Direito -->
+            <div class="absolute -top-4 -right-4 md:-right-6 bg-white p-3 rounded-full shadow-lg z-20 flex items-center justify-center border border-pink-light">
+               <i data-lucide="heart" class="w-6 h-6 text-primary fill-primary/20"></i>
+            </div>
+
+            <!-- Badge Inferior Esquerdo -->
+            <div class="absolute -bottom-6 -left-6 md:-left-10 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-xl z-20 flex items-center gap-4 border border-pink-light max-w-[220px]">
+              <div class="bg-primary/10 p-3 rounded-full text-primary shrink-0">
+                <i data-lucide="globe" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-xs text-neutral-light font-medium uppercase tracking-wider">Atendimento</p>
+                <p class="font-bold text-neutral text-sm">100% Online</p>
+              </div>
+            </div>
+
+            <!-- Fundo decorativo da imagem -->
+            <div class="absolute -inset-4 bg-primary/15 rounded-[2.5rem] -z-10 transform translate-x-4 translate-y-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. PARA QUEM É INDICADO -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6 fade-up-section">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-3xl md:text-4xl font-medium mb-4">Quando é hora de buscar ajuda?</h2>
+        <p class="text-neutral-light text-lg max-w-2xl mx-auto">
+          Muitas vezes, a gente vai levando a vida, acreditando que é apenas uma fase ou que, com o tempo, tudo vai passar. Porém, quando o sofrimento começa a afetar a rotina, o trabalho, os relacionamentos ou a forma como você se percebe, agora é hora de dar atenção a isso.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+        <div class="bg-beige p-6 rounded-2xl flex flex-col gap-4 transition-all hover:shadow-md border border-transparent hover:border-pink-light">
+          <div class="bg-primary/10 p-3 rounded-full text-primary w-fit">
+            <i data-lucide="brain-circuit" class="w-6 h-6"></i>
+          </div>
+          <p class="text-neutral">Sensação constante de ansiedade ou preocupação excessiva, sentindo dificuldade para relaxar, mesmo em momentos que deveriam ser de descanso.</p>
+        </div>
+        <div class="bg-beige p-6 rounded-2xl flex flex-col gap-4 transition-all hover:shadow-md border border-transparent hover:border-pink-light">
+          <div class="bg-primary/10 p-3 rounded-full text-primary w-fit">
+            <i data-lucide="cloud-rain" class="w-6 h-6"></i>
+          </div>
+          <p class="text-neutral">Tristeza ou desânimo persistente, acompanhados da perda de interesse e desmotivação por atividades que antes eram prazerosas.</p>
+        </div>
+        <div class="bg-beige p-6 rounded-2xl flex flex-col gap-4 transition-all hover:shadow-md border border-transparent hover:border-pink-light">
+          <div class="bg-primary/10 p-3 rounded-full text-primary w-fit">
+            <i data-lucide="moon" class="w-6 h-6"></i>
+          </div>
+          <p class="text-neutral">Dificuldade para adormecer ou sensação de acordar sem realmente ter descansado, mesmo após horas de sono.</p>
+        </div>
+        <div class="bg-beige p-6 rounded-2xl flex flex-col gap-4 transition-all hover:shadow-md border border-transparent hover:border-pink-light">
+          <div class="bg-primary/10 p-3 rounded-full text-primary w-fit">
+            <i data-lucide="battery-low" class="w-6 h-6"></i>
+          </div>
+          <p class="text-neutral">Viver antecipando problemas e criando cenários negativos, dificultando a concentração e gerando a sensação de sobrecarga mental.</p>
+        </div>
+        <div class="bg-beige p-6 rounded-2xl flex flex-col gap-4 transition-all hover:shadow-md border border-transparent hover:border-pink-light">
+          <div class="bg-primary/10 p-3 rounded-full text-primary w-fit">
+            <i data-lucide="frown" class="w-6 h-6"></i>
+          </div>
+          <p class="text-neutral">Sensação de estar vivendo abaixo do seu potencial, como se você pudesse mais — mas algo te trava.</p>
+        </div>
+        <div class="bg-beige p-6 rounded-2xl flex flex-col gap-4 transition-all hover:shadow-md border border-transparent hover:border-pink-light">
+          <div class="bg-primary/10 p-3 rounded-full text-primary w-fit">
+            <i data-lucide="lock" class="w-6 h-6"></i>
+          </div>
+          <p class="text-neutral">Sentir culpa ao descansar ou ao não conseguir ser produtivo o tempo todo.</p>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center bg-pink-light/50 p-8 rounded-3xl border border-pink-light">
+        <p class="font-heading text-xl italic text-neutral mb-6">
+          "Se você se identificou com algum desses pontos, saiba que buscar apoio é um sinal de autocuidado, não de fraqueza."
+        </p>
+        <a href="#agendar" class="inline-flex items-center bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-hover transition-colors shadow-sm">
+          Agende uma sessão
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PROVA SOCIAL -->
+  <section class="py-20 bg-beige">
+    <div class="max-w-6xl mx-auto px-6 fade-up-section">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-3xl md:text-4xl font-medium mb-6">O que diz quem passou por aqui?</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-3xl p-8 shadow-sm flex flex-col h-full hover:shadow-md transition-shadow border border-pink-light/30">
+          <i data-lucide="quote" class="w-10 h-10 text-primary/20 mb-4"></i>
+          <blockquote class="text-neutral-light italic flex-grow mb-8 text-lg">
+            "Uma profissional que sabe mesmo escutar e acolher, utilizou uma técnica muito boa pra ajudar com a ansiedade."
+          </blockquote>
+          <div class="flex items-center gap-4 mt-auto pt-4 border-t border-beige">
+            <div class="w-12 h-12 bg-pink-light rounded-full flex items-center justify-center text-primary font-bold text-lg">R. H.</div>
+            <div>
+              <div class="font-semibold text-neutral text-md">R. H.</div>
+              <div class="text-xs text-neutral-light">Paciente</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 shadow-sm flex flex-col h-full hover:shadow-md transition-shadow border border-pink-light/30">
+          <i data-lucide="quote" class="w-10 h-10 text-primary/20 mb-4"></i>
+          <blockquote class="text-neutral-light italic flex-grow mb-8 text-lg">
+            "Excelente profissional. Capacitada, gentil. Atenciosa, pouco tempo com ela já tenho uma grande melhora. Muito eficaz 👏👏👏."
+          </blockquote>
+          <div class="flex items-center gap-4 mt-auto pt-4 border-t border-beige">
+            <div class="w-12 h-12 bg-pink-light rounded-full flex items-center justify-center text-primary font-bold text-lg">T. A.</div>
+            <div>
+              <div class="font-semibold text-neutral text-md">T. A.</div>
+              <div class="text-xs text-neutral-light">Paciente</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 shadow-sm flex flex-col h-full hover:shadow-md transition-shadow border border-pink-light/30">
+          <i data-lucide="quote" class="w-10 h-10 text-primary/20 mb-4"></i>
+          <blockquote class="text-neutral-light italic flex-grow mb-8 text-lg">
+            "Uma profissional excelente, capacitada, ética e acolhedora. Apenas umas das melhores profissionais que já tive o prazer de conhecer."
+          </blockquote>
+          <div class="flex items-center gap-4 mt-auto pt-4 border-t border-beige">
+            <div class="w-12 h-12 bg-pink-light rounded-full flex items-center justify-center text-primary font-bold text-lg">S. L.</div>
+            <div>
+              <div class="font-semibold text-neutral text-md">S. L.</div>
+              <div class="text-xs text-neutral-light">Paciente</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="https://www.google.com/search?sca_esv=a39744d3bd92150d&sxsrf=ANbL-n5XSP0Zk62wkGJwp5ziN5ZaaIBrvw:1778676448028&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOd1M2p3e2_5D8FSrZ48brxtkm3-DTwg6jpT6GHHBnzH-q5amK4_fufzpdg3p8-YP4SgOtpRqG3tN1PUgh7qJyxwwFRjmslFYzo0jq12KdhtMP04pNw%3D%3D&q=Psic%C3%B3loga+Isabel+Massa+Coment%C3%A1rios&sa=X&ved=2ahUKEwjMqeuOpraUAxU9LrkGHTEvErwQ0bkNegQIOhAH&biw=1920&bih=911&dpr=1&sei=8XIEauiJG5CI5OUP8pL06QQ" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white border border-pink-light text-neutral px-6 py-3 rounded-full font-semibold hover:shadow-md transition-shadow text-sm">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          Ver todos os depoimentos no Google
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. ABORDAGEM -->
+  <section id="abordagem" class="py-24 bg-white relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-6 relative z-10 fade-up-section">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-heading text-3xl md:text-4xl font-medium mb-6">Como funciona o acompanhamento</h2>
+          <p class="text-neutral-light text-lg mb-8">
+            Não é só conversar sobre o que você sente. A ideia é entender o que está por trás da ansiedade — e te dar ferramentas reais para lidar com ela no dia a dia.
+          </p>
+          
+          <div class="space-y-8">
+            <div class="flex gap-4">
+              <div class="w-12 h-12 rounded-full bg-pink-light flex items-center justify-center text-primary shrink-0">
+                <span class="font-heading font-bold text-xl">1</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Regulação emocional na prática</h3>
+                <p class="text-neutral-light">Você aprende técnicas específicas para reduzir a ansiedade no momento em que ela aparece. Estratégias que cabem na sua rotina — não são exercícios teóricos guardados na gaveta.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <div class="w-12 h-12 rounded-full bg-pink-light flex items-center justify-center text-primary shrink-0">
+                <span class="font-heading font-bold text-xl">2</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Entender a causa, não só o sintoma</h3>
+                <p class="text-neutral-light">Fazemos juntos um olhar para a sua história emocional para entender por que a ansiedade se instalou do jeito que se instalou. Quando você entende a causa, fica muito mais fácil trabalhar nela.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-10 p-6 bg-beige rounded-2xl border border-pink-light">
+            <p class="text-sm text-neutral-light flex items-start gap-3">
+              <i data-lucide="award" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
+              <span>É uma abordagem comportamental, prática e personalizada — porque cada pessoa carrega uma história diferente. Isabel tem <strong>formação internacional em trauma</strong>, com capacitação em Portugal, e atende pacientes online em todo o Brasil.</span>
+            </p>
+          </div>
+          
+          <div class="mt-8">
+            <a href="#agendar" class="inline-flex items-center text-primary font-bold hover:text-primary-hover group">
+              Agende uma sessão
+              <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="relative hidden md:block">
+           <div class="aspect-square bg-pink-light rounded-full mix-blend-multiply opacity-60 absolute -top-10 -right-10 w-full"></div>
+           <div class="bg-beige rounded-3xl p-6 relative shadow-xl transform rotate-0 transition-transform hover:rotate-2 duration-500">
+             <img src="imagens/isabel-como-funciona.jpg" alt="Isabel Massa - Psicóloga" class="w-full h-[480px] object-cover rounded-2xl">
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SOBRE MIM -->
+  <section class="py-24 bg-beige relative">
+    <div class="max-w-5xl mx-auto px-6 fade-up-section">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Placeholder Imagem Isabel (sem imagem AI) -->
+        <div class="order-2 md:order-1 flex justify-center">
+          <div class="w-full max-w-md aspect-[4/5] rounded-[2rem] overflow-hidden shadow-lg border-4 border-white">
+            <img src="imagens/isabel-sobre-mim.jpg" alt="Isabel Massa - Psicóloga" class="w-full h-full object-cover">
+          </div>
+        </div>
+        
+        <div class="order-1 md:order-2">
+          <h2 class="font-heading text-3xl md:text-4xl font-medium mb-6">Olá, eu sou a Isabel</h2>
+          <div class="space-y-4 text-neutral-light text-lg leading-relaxed">
+            <p>Sou psicóloga especializada em ansiedade e regulação emocional, e acredito que a maioria das pessoas que chegam até mim não precisam de mais força de vontade — precisam de entendimento.</p>
+            <p>Entender o que acontece por dentro. Por que certos gatilhos disparam tanto. Por que é difícil parar de se cobrar. Por que o controle parece sempre escorregando das mãos.</p>
+            <p>O meu trabalho é estar ao seu lado nesse processo — com técnica, com cuidado e sem julgamento.</p>
+            <p class="font-medium text-neutral bg-white p-5 rounded-2xl shadow-sm inline-block mt-4 border border-white/50">
+              <span class="flex items-center gap-2 mb-1 text-primary"><i data-lucide="laptop" class="w-5 h-5"></i> Atendimento 100% online</span>
+              A sessão acontece no seu tempo, no seu espaço, para todo o Brasil.
+            </p>
+          </div>
+          
+          <div class="mt-8">
+            <a href="#agendar" class="inline-flex items-center justify-center bg-white text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-beige transition-colors shadow-sm border border-transparent hover:border-pink-light">
+              Fale comigo
+              <i data-lucide="message-circle" class="ml-2 w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CTA FINAL -->
+  <section id="agendar" class="py-24 bg-beige">
+    <div class="max-w-5xl mx-auto px-6 fade-up-section">
+      <div class="bg-[#7A8F7B] rounded-3xl px-10 py-16 md:px-20 md:py-20 text-center">
+        <h2 class="font-heading text-4xl md:text-5xl font-medium mb-6 text-white">Você não precisa continuar assim</h2>
+        <p class="text-lg md:text-xl text-white/60 mb-10 leading-relaxed max-w-2xl mx-auto">
+          É possível viver sem a sensação constante de que algo ruim está prestes a acontecer. Dormir com mais tranquilidade, pensar com clareza e se sentir mais leve. O primeiro passo é mais simples do que parece: uma sessão em um espaço seguro.
+        </p>
+
+        <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-white text-[#7A8F7B] px-10 py-4 rounded-full font-bold text-lg hover:bg-beige transition-transform hover:-translate-y-1 shadow-lg w-full sm:w-auto">
+          Agende uma sessão
+          <i data-lucide="calendar-check" class="ml-3 w-5 h-5"></i>
+        </a>
+
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-white/40">
+          <span class="flex items-center gap-2"><i data-lucide="globe" class="w-4 h-4 text-white/70"></i> Atendimento online</span>
+          <span class="hidden sm:inline">•</span>
+          <span class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4 text-white/70"></i> Vagas limitadas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-neutral text-beige/70 py-12 text-center text-sm">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="font-heading text-2xl text-beige mb-2">Isabel Massa</div>
+      <p class="text-pink-light/80 font-medium">Psicóloga Clínica CRP 01/27247</p>
+
+      <div class="border-t border-white/10 pt-8 mt-8">
+        <p>© 2026 Isabel Massa. Todos os direitos reservados.</p>
+        <p class="mt-2 text-white/30">Desenvolvido por: <a href="https://www.instagram.com/otaviotrettel/" target="_blank" rel="noopener noreferrer" class="hover:text-white/60 transition-colors">Otavio Trettel</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
