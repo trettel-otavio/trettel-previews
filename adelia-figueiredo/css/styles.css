@@ -15,7 +15,7 @@ html { scroll-behavior: smooth; }
     top: 80px;
     left: 0;
     right: 0;
-    background: rgba(250, 247, 243, 0.98);
+    background: rgba(252, 242, 244, 0.98);
     backdrop-filter: blur(12px);
     flex-direction: column;
     gap: 0;
