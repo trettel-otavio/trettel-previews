@@ -1,0 +1,86 @@
+/* Custom Styles for Ciro Platenik Landing Page */
+
+:root {
+  --primary: #000000;
+  --secondary: #64748B;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography refinement */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+}
+
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Button Hover Effects */
+.btn-primary-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary-hover::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: transform 0.5s;
+}
+
+.btn-primary-hover:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Section Specifics */
+main section:first-of-type {
+  background: radial-gradient(circle at top right, rgba(43, 88, 233, 0.03), transparent 40%),
+              radial-gradient(circle at bottom left, rgba(43, 88, 233, 0.02), transparent 40%);
+}
+
+#abordagem {
+  background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03) 0%, transparent 20%);
+}
+
+@media (max-width: 768px) {
+  .text-display-lg {
+    font-size: 2.75rem;
+  }
+}

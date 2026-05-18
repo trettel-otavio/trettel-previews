@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciro Platenik | Psicólogo na Barra da Tijuca - Especialista em TCC</title>
+  <meta name="description"
+    content="Psicologia presencial na Barra da Tijuca focada em performance, clareza mental e resultados concretos para empresários e profissionais.">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0E121E',
+            brand: '#2B58E9',
+            secondary: '#64748B',
+            accent: '#1E293B',
+            surface: '#F9FAFB',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          fontSize: {
+            'display-lg': ['4.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+            'display-md': ['3.5rem', { lineHeight: '1.2', letterSpacing: '-0.02em' }],
+            'display-sm': ['2.25rem', { lineHeight: '1.3', letterSpacing: '-0.01em' }],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-white text-gray-900 font-sans antialiased overflow-x-hidden">
+
+  <!-- Header / Navigation -->
+  <header id="main-nav"
+    class="fixed top-0 w-full z-50 transition-all duration-500 border-b border-white/10 bg-[#0E121E]/60 backdrop-blur-md">
+    <nav class="container mx-auto px-6 py-6 flex justify-between items-center">
+      <div class="logo flex flex-col items-center text-white transition-colors duration-500">
+        <div class="text-xl font-medium tracking-tight">
+          CIRO<span class="font-light opacity-80">PLATENIK</span>
+        </div>
+        <span class="text-xs text-gray-400 mt-0.5">CRP 05/38965</span>
+      </div>
+      <div class="hidden md:flex space-x-8 items-center">
+        <a href="#beneficios"
+          class="nav-link text-sm font-medium hover:text-brand transition-colors text-white duration-500">Benefícios</a>
+        <a href="#abordagem"
+          class="nav-link text-sm font-medium hover:text-brand transition-colors text-white duration-500">Abordagem</a>
+        <a href="#sobre"
+          class="nav-link text-sm font-medium hover:text-brand transition-colors text-white duration-500">Sobre</a>
+        <a href="https://wa.me/5521981228120" target="_blank"
+          class="bg-brand text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-opacity-90 transition-all duration-300">Agendar
+          Sessão</a>
+      </div>
+      <a href="https://wa.me/5521981228120" target="_blank"
+        class="md:hidden bg-brand text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-opacity-90 transition-all duration-300">Agendar
+        Sessão</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. HERO -->
+    <section class="relative h-screen flex items-center px-6 overflow-hidden">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="Imagens/nova-hero002.jpg" alt="Ciro Platenik" class="w-full h-full object-cover object-center">
+        <div class="absolute inset-0 bg-black/10"></div> <!-- Overlay ultra sutil apenas para profundidade -->
+      </div>
+
+      <div class="container mx-auto relative z-10">
+        <div class="max-w-5xl">
+          <span
+            class="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-sm rounded-full text-xs font-medium uppercase tracking-widest text-white mb-8 reveal"
+            data-delay="0">
+            Psicologia Presencial · Barra da Tijuca, Rio de Janeiro
+          </span>
+          <h1 class="text-display-sm md:text-display-lg font-medium text-white mb-8 reveal" data-delay="100">
+            Psicólogo na Barra da Tijuca, especialista em TCC.
+          </h1>
+          <p class="text-xl md:text-2xl text-white/80 max-w-2xl mb-12 leading-relaxed reveal" data-delay="200">
+            Sessões presenciais na Barra da Tijuca com foco em performance, clareza mental e resultados concretos. Para
+            empresários e profissionais que não têm tempo a perder.
+          </p>
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 reveal" data-delay="300">
+            <a href="https://wa.me/5521981228120" target="_blank"
+              class="group bg-brand text-white px-10 py-5 rounded-full text-lg font-medium hover:bg-opacity-90 transition-all duration-300 flex items-center shadow-lg shadow-brand/20">
+              Agendar primeira sessão
+              <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+            <div class="text-sm text-white/70 border-l border-white/30 pl-6 py-1">
+              Barra da Tijuca · RJ<br>
+              Atendimento presencial · Consultas particulares
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 2. BENEFÍCIOS -->
+    <section id="beneficios" class="py-24 bg-surface px-6">
+      <div class="container mx-auto">
+        <div class="mb-20 max-w-3xl">
+          <span class="text-xs font-medium uppercase tracking-widest text-secondary mb-4 block">Benefícios do meu
+            atendimento</span>
+          <h2 class="text-4xl md:text-5xl font-medium text-primary mb-6">Resultados que você vai sentir fora do
+            consultório.</h2>
+          <p class="text-lg text-secondary leading-relaxed md:line-clamp-3">
+            Cada sessão é construída com objetivo claro. Não é conversa por conversa. É um processo direto, orientado
+            para o que realmente trava seu desempenho.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <!-- Item 01 -->
+          <div class="group reveal" data-delay="0">
+            <div
+              class="w-12 h-12 rounded-full border border-[#64748b]/30 flex items-center justify-center text-primary font-medium mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+              01</div>
+            <h3 class="text-2xl font-medium text-primary mb-4">Foco que não cede sob pressão</h3>
+            <p class="text-secondary leading-relaxed">Você aprende a manter a concentração mesmo nos dias de maior
+              demanda. Ciro trabalha os gatilhos específicos que dispersam sua atenção e constrói estratégias
+              personalizadas para o seu contexto.</p>
+          </div>
+          <!-- Item 02 -->
+          <div class="group reveal" data-delay="100">
+            <div
+              class="w-12 h-12 rounded-full border border-[#64748b]/30 flex items-center justify-center text-primary font-medium mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+              02</div>
+            <h3 class="text-2xl font-medium text-primary mb-4">Zero procrastinação nas decisões</h3>
+            <p class="text-secondary leading-relaxed">Entenda o que está por trás da postergação e dissolva esse padrão
+              na raiz. O trabalho com TCC identifica os bloqueios cognitivos que sabotam sua produtividade antes que
+              eles atuem.</p>
+          </div>
+          <!-- Item 03 -->
+          <div class="group reveal" data-delay="200">
+            <div
+              class="w-12 h-12 rounded-full border border-[#64748b]/30 flex items-center justify-center text-primary font-medium mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+              03</div>
+            <h3 class="text-2xl font-medium text-primary mb-4">Autoridade e clareza em ambientes</h3>
+            <p class="text-secondary leading-relaxed">Em reuniões difíceis, negociações e conflitos com sócios ou
+              equipe,
+              você desenvolve a estabilidade emocional para decidir com lucidez mesmo quando o cenário é adverso.</p>
+          </div>
+          <!-- Item 04 -->
+          <div class="group reveal" data-delay="300">
+            <div
+              class="w-12 h-12 rounded-full border border-[#64748b]/30 flex items-center justify-center text-primary font-medium mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+              04</div>
+            <h3 class="text-2xl font-medium text-primary mb-4">Relações profissionais estratégicas</h3>
+            <p class="text-secondary leading-relaxed">Liderança, comunicação e conflito têm raízes psicológicas. Ciro
+              ajuda você a entender seus padrões relacionais e a transformá-los em vantagem competitiva.</p>
+          </div>
+          <!-- Item 05 -->
+          <div class="group reveal" data-delay="400">
+            <div
+              class="w-12 h-12 rounded-full border border-[#64748b]/30 flex items-center justify-center text-primary font-medium mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+              05</div>
+            <h3 class="text-2xl font-medium text-primary mb-4">Performance sustentável</h3>
+            <p class="text-secondary leading-relaxed">Alta performance não é velocidade máxima o tempo todo. Você
+              aprende a calibrar energia, reconhecer limites e construir uma rotina de alto rendimento que não te
+              quebra.</p>
+          </div>
+          <!-- Item 06 -->
+          <div class="group reveal" data-delay="500">
+            <div
+              class="w-12 h-12 rounded-full border border-[#64748b]/30 flex items-center justify-center text-primary font-medium mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+              06</div>
+            <h3 class="text-2xl font-medium text-primary mb-4">Evolução mensurável</h3>
+            <p class="text-secondary leading-relaxed">Cada sessão tem direção. Você sai de cada atendimento com algo
+              concreto para aplicar, sem ficar apenas em reflexões.</p>
+          </div>
+        </div>
+
+      </div>
+      </div>
+    </section>
+
+    <!-- 3. DEPOIMENTOS -->
+    <section class="py-24 px-6 overflow-hidden relative">
+      <div class="absolute inset-0 opacity-[0.3] pointer-events-none"
+        style="background-image: radial-gradient(#cbd5e1 2px, transparent 2px); background-size: 32px 32px; -webkit-mask-image: radial-gradient(circle, black 40%, transparent 80%); mask-image: radial-gradient(circle, black 40%, transparent 80%);">
+      </div>
+      <div class="container mx-auto relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-20">
+          <span class="text-xs font-medium uppercase tracking-widest text-secondary mb-4 block">Depoimentos</span>
+          <h2 class="text-4xl md:text-5xl font-medium text-primary mb-6">O que meus pacientes.</h2>
+          <p class="text-lg text-secondary">
+            Opiniões de quem já viveu o atendimento na prática.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-10 rounded-2xl border border-gray-100 shadow-sm reveal" data-delay="0">
+            <div class="flex mb-6">
+              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+            </div>
+            <p class="text-gray-700 italic mb-8 leading-relaxed">"Fui ao Ciro passando por um momento difícil na
+              empresa. Em poucas semanas comecei a enxergar as situações de um ângulo diferente. A objetividade das
+              sessões é o que mais me surpreendeu."</p>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-xs font-bold mr-4">MA
+              </div>
+              <div>
+                <div class="font-medium text-sm">M. A. · Empresário</div>
+                <div class="text-xs text-secondary">Google Reviews</div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-10 rounded-2xl border border-gray-100 shadow-sm reveal" data-delay="100">
+            <div class="flex mb-6">
+              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+            </div>
+            <p class="text-gray-700 italic mb-8 leading-relaxed">"Profissional extremamente competente. Cada sessão
+              termina com algo prático para levar. Não é aquela terapia que você sai sem saber o que fez. Tem direção,
+              tem evolução."</p>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-xs font-bold mr-4">RF
+              </div>
+              <div>
+                <div class="font-medium text-sm">R. F. · Executivo</div>
+                <div class="text-xs text-secondary">Google Reviews</div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-10 rounded-2xl border border-gray-100 shadow-sm reveal" data-delay="200">
+            <div class="flex mb-6">
+              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+            </div>
+            <p class="text-gray-700 italic mb-8 leading-relaxed">"Procurei o Ciro por indicação e foi uma das melhores
+              decisões que tomei. Ele consegue ir direto ao ponto sem perder a sensibilidade. Meu desempenho melhorou de
+              forma notável."</p>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-xs font-bold mr-4">CB
+              </div>
+              <div>
+                <div class="font-medium text-sm">C. B. · Profissional Liberal</div>
+                <div class="text-xs text-secondary">Google Reviews</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mb-16">
+          <a href="https://www.google.com/search?q=ciro+platenik+psicologo#lrd=0x9bd915f7956a81:0x4e6d4454f7623a3a,1"
+            target="_blank"
+            class="text-sm font-medium border-b border-brand pb-1 hover:text-secondary hover:border-secondary transition-all">Avaliações
+            verificadas no Google · Ver todas as avaliações →</a>
+        </div>
+
+      </div>
+      </div>
+    </section>
+
+    <!-- 4. SOBRE A ABORDAGEM -->
+    <section id="abordagem" class="py-24 px-6 bg-primary text-white">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div>
+            <span class="text-xs font-medium uppercase tracking-widest text-gray-400 mb-4 block">A abordagem</span>
+            <h2 class="text-display-sm md:text-5xl font-medium mb-8">TCC: a ciência por trás de resultados reais.</h2>
+            <p class="text-xl text-gray-300 mb-12 font-light">A Terapia Cognitivo-Comportamental não é conversa. É
+              método.</p>
+
+            <div class="space-y-10">
+              <div class="reveal">
+                <h4 class="text-xl font-medium mb-4">O que é a TCC?</h4>
+                <p class="text-gray-400 leading-relaxed">A TCC é uma abordagem baseada em evidências científicas: a
+                  forma como você pensa influencia como você sente e age. Orientada para o presente e para o futuro, com
+                  metas claras e resultados mensuráveis.</p>
+              </div>
+              <div class="reveal">
+                <h4 class="text-xl font-medium mb-4">Como funciona na prática?</h4>
+                <p class="text-gray-400 leading-relaxed">Identificamos os padrões de pensamento que geram respostas
+                  disfuncionais. A partir daí, trabalhamos para reestruturar esses padrões por respostas mais
+                  conscientes e eficazes.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-8 md:p-12 rounded-3xl backdrop-blur-sm border border-white/10">
+            <div class="grid grid-cols-1 gap-8">
+              <div class="flex items-start gap-6">
+                <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                  <i data-lucide="target" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h5 class="text-lg font-medium mb-2">Mapeamento</h5>
+                  <p class="text-sm text-gray-400">Identificamos juntos os pensamentos automáticos e crenças que limitam
+                    sua performance.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-6">
+                <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                  <i data-lucide="search" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h5 class="text-lg font-medium mb-2">Questionamento</h5>
+                  <p class="text-sm text-gray-400">Examinamos a validade desses pensamentos e desenvolvemos perspectivas
+                    mais funcionais.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-6">
+                <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                  <i data-lucide="zap" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h5 class="text-lg font-medium mb-2">Ação</h5>
+                  <p class="text-sm text-gray-400">Cada sessão termina com ferramentas práticas para aplicar
+                    imediatamente no mundo real.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-6">
+                <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                  <i data-lucide="check-circle" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h5 class="text-lg font-medium mb-2">Consolidação</h5>
+                  <p class="text-sm text-gray-400">Os novos padrões se tornam automáticos. Você sai melhor do que
+                    entrou.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-12 p-6 bg-white/5 rounded-2xl border border-white/10">
+              <p class="text-sm text-gray-400 italic">"A TCC conta com mais de 2.000 estudos clínicos que comprovam sua
+                eficácia... É a abordagem recomendada pela OMS."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CONSULTÓRIO -->
+    <section class="py-24 px-6 bg-white">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-20 items-center">
+          <div class="order-2 lg:order-1 reveal">
+            <span class="text-xs font-medium uppercase tracking-widest text-secondary mb-4 block">Por dentro do
+              consultório</span>
+            <h2 class="text-4xl md:text-5xl font-medium text-primary mb-8">Um espaço feito para pensar com clareza.</h2>
+            <p class="text-lg text-secondary mb-12">
+              Localizado no coração da Barra da Tijuca, o consultório oferece um ambiente discreto, reservado e de fácil
+              acesso, para que a sessão seja o menor atrito possível na sua agenda.
+            </p>
+
+            <div class="space-y-6 mb-10">
+              <div class="flex items-start gap-4">
+                <i data-lucide="map-pin" class="w-5 h-5 text-secondary shrink-0 mt-0.5"></i>
+                <span class="text-sm">Av. Embaixador Abelardo Bueno, Barra da Tijuca, RJ</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <i data-lucide="clock" class="w-5 h-5 text-secondary shrink-0"></i>
+                <span class="text-sm">Segunda a quinta, das 8h às 19h</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <i data-lucide="message-circle" class="w-5 h-5 text-secondary shrink-0"></i>
+                <a href="https://wa.me/5521981228120" target="_blank"
+                  class="text-sm hover:text-brand transition-colors">(21) 98122-8120</a>
+              </div>
+            </div>
+
+            <a href="https://maps.app.goo.gl/KnRhdJ9EFX1t1KebA" target="_blank"
+              class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white rounded-full text-sm font-medium hover:bg-opacity-90 transition-all">
+              <i data-lucide="map" class="w-4 h-4"></i>
+              Ver rota
+            </a>
+          </div>
+          <div class="order-1 lg:order-2 relative group reveal" data-delay="0">
+            <div class="overflow-hidden rounded-[2.5rem] shadow-2xl">
+              <div id="office-carousel" class="flex transition-transform duration-700 ease-in-out">
+                <div class="min-w-full aspect-[4/3]">
+                  <img src="Imagens/ciro-consultorio01.jpeg" alt="Consultório 1" class="w-full h-full object-cover">
+                </div>
+                <div class="min-w-full aspect-[4/3]">
+                  <img src="Imagens/ciro-consultorio02.jpeg" alt="Consultório 2" class="w-full h-full object-cover">
+                </div>
+                <div class="min-w-full aspect-[4/3]">
+                  <img src="Imagens/ciro-consultorio03.jpeg" alt="Consultório 3" class="w-full h-full object-cover">
+                </div>
+              </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button onclick="moveCarousel(-1)"
+              class="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all hover:bg-white/20">
+              <i data-lucide="chevron-left"></i>
+            </button>
+            <button onclick="moveCarousel(1)"
+              class="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all hover:bg-white/20">
+              <i data-lucide="chevron-right"></i>
+            </button>
+
+            <!-- Indicators -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
+              <div class="carousel-dot w-2 h-2 rounded-full bg-white opacity-100 transition-all"></div>
+              <div class="carousel-dot w-2 h-2 rounded-full bg-white opacity-30 transition-all"></div>
+              <div class="carousel-dot w-2 h-2 rounded-full bg-white opacity-30 transition-all"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SOBRE MIM -->
+    <section id="sobre" class="py-24 px-6 bg-surface">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row gap-16 items-center mb-20">
+          <div class="w-full md:w-[35%] aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl reveal shrink-0">
+            <img src="Imagens/ciro_sobre02.webp" alt="Ciro Platenik - Psicólogo" class="w-full h-full object-cover">
+          </div>
+          <div class="reveal">
+            <span class="text-xs font-medium uppercase tracking-widest text-secondary mb-4 block">Sobre Ciro
+              Platenik</span>
+            <h2 class="text-4xl md:text-5xl font-medium text-primary mb-8">10 anos de experiência em psicoterapia para quem busca clareza, equilíbrio e mudança real.</h2>
+            <p class="text-lg text-secondary leading-relaxed mb-6">
+              Ciro Platenik é psicólogo clínico especializado em Terapia Cognitivo-Comportamental, com mais de 10 anos de experiência e mais de 15.000 atendimentos realizados.
+            </p>
+            <p class="text-lg text-secondary leading-relaxed mb-6">
+              Seu trabalho é voltado para pessoas que enfrentam desafios emocionais, profissionais ou de relacionamento e buscam um acompanhamento prático, seguro e bem direcionado.
+            </p>
+            <p class="text-lg text-secondary leading-relaxed mb-8">
+              A proposta é oferecer um espaço de escuta, reflexão e orientação, ajudando cada paciente a compreender melhor seus padrões, lidar com suas dificuldades e construir mudanças possíveis no dia a dia.
+            </p>
+            <p class="text-base text-secondary leading-relaxed border-l-2 border-brand pl-6 py-2">
+              Atendimento particular com foco em acolhimento, clareza e evolução a cada sessão.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-12">
+          <div class="group reveal" data-delay="0">
+            <div class="w-12 h-12 rounded-full border border-[#64748b]/30 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+              <i data-lucide="brain" class="w-5 h-5"></i>
+            </div>
+            <h5 class="font-medium text-primary mb-2">Método TCC</h5>
+            <p class="text-sm text-secondary">Abordagem estruturada, com técnicas comprovadas para mudança de padrões de pensamento.</p>
+          </div>
+          <div class="group reveal" data-delay="100">
+            <div class="w-12 h-12 rounded-full border border-[#64748b]/30 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+              <i data-lucide="trending-up" class="w-5 h-5"></i>
+            </div>
+            <h5 class="font-medium text-primary mb-2">Foco em evolução</h5>
+            <p class="text-sm text-secondary">Cada atendimento tem um objetivo. Você saberá exatamente o que trabalhou e o que leva consigo.</p>
+          </div>
+          <div class="group reveal" data-delay="200">
+            <div class="w-12 h-12 rounded-full border border-[#64748b]/30 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+              <i data-lucide="zap" class="w-5 h-5"></i>
+            </div>
+            <h5 class="font-medium text-primary mb-2">Pragmatismo</h5>
+            <p class="text-sm text-secondary">O objetivo é tirar você do problema o mais rápido possível, sem prolongar o processo.</p>
+          </div>
+          <div class="group reveal" data-delay="300">
+            <div class="w-12 h-12 rounded-full border border-[#64748b]/30 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+            <h5 class="font-medium text-primary mb-2">Atendimento exclusivo</h5>
+            <p class="text-sm text-secondary">Sem convênio, sem fila, sem pressa. Você tem atenção total na Barra da Tijuca.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CTA FINAL -->
+    <section id="contato" class="py-24 px-6 bg-white">
+      <div class="container mx-auto">
+        <div
+          class="bg-brand rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden shadow-2xl shadow-brand/30 reveal">
+          <!-- Subtle Background Elements -->
+          <div class="absolute inset-0 opacity-30 pointer-events-none">
+            <div class="absolute -top-48 -right-48 w-[600px] h-[600px] bg-white rounded-full blur-[120px] opacity-20">
+            </div>
+            <div class="absolute -bottom-48 -left-48 w-[600px] h-[600px] bg-white rounded-full blur-[120px] opacity-20">
+            </div>
+          </div>
+
+          <div class="relative z-10 max-w-4xl mx-auto text-white">
+            <h2 class="text-4xl md:text-6xl font-medium mb-8 leading-tight">
+              Pronto para transformar sua performance mental?
+            </h2>
+            <p class="text-xl md:text-2xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
+              Agende uma sessão estratégica com Ciro Platenik e comece a construir resultados reais através da TCC.
+            </p>
+            <div class="flex flex-col items-center gap-4">
+              <a href="https://wa.me/5521981228120" target="_blank"
+                class="bg-white text-brand px-12 py-6 rounded-full text-xl font-medium hover:scale-105 transition-all duration-300 shadow-2xl flex items-center gap-3">
+                <i data-lucide="message-circle" class="w-6 h-6"></i>
+                Agendar via WhatsApp
+              </a>
+              <span class="text-white/60 text-sm font-medium uppercase tracking-widest">Barra da Tijuca · RJ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-12 border-t border-gray-100 px-6">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="flex flex-col items-center">
+        <div class="text-sm font-medium tracking-tight">
+          CIRO<span class="font-light text-secondary">PLATENIK</span>
+        </div>
+        <span class="text-xs text-gray-400 mt-0.5">CRP 05/38965</span>
+      </div>
+      <div class="text-xs text-secondary">
+        © 2024 Ciro Platenik. Todos os direitos reservados.
+      </div>
+      <div class="flex space-x-6">
+        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i data-lucide="instagram"
+            class="w-5 h-5"></i></a>
+        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i data-lucide="linkedin"
+            class="w-5 h-5"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/5521981228120" target="_blank"
+    class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-7 h-7 fill-white">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>
