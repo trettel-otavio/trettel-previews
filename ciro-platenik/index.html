@@ -399,39 +399,40 @@
               Ver rota
             </a>
           </div>
-          <div class="order-1 lg:order-2 relative group reveal" data-delay="0">
+          <div class="order-1 lg:order-2 reveal" data-delay="0">
             <div class="relative overflow-hidden rounded-[2.5rem] shadow-2xl aspect-[4/3]">
-              <div id="office-carousel" class="absolute inset-0">
-                <div class="carousel-slide is-active absolute inset-0">
-                  <img src="/ciro-platenik/Imagens/ciro-consultorio01.jpeg" alt="Consultório 1"
-                    class="w-full h-full object-cover">
-                </div>
-                <div class="carousel-slide absolute inset-0">
-                  <img src="/ciro-platenik/Imagens/ciro-consultorio02.jpeg" alt="Consultório 2"
-                    class="w-full h-full object-cover">
-                </div>
-                <div class="carousel-slide absolute inset-0">
-                  <img src="/ciro-platenik/Imagens/ciro-consultorio03.jpeg" alt="Consultório 3"
-                    class="w-full h-full object-cover">
-                </div>
+
+              <!-- Slides -->
+              <div class="carousel-slide is-active absolute inset-0">
+                <img src="/ciro-platenik/Imagens/ciro-consultorio01.jpeg" alt="Consultório 1"
+                  class="w-full h-full object-cover">
               </div>
-            </div>
+              <div class="carousel-slide absolute inset-0">
+                <img src="/ciro-platenik/Imagens/ciro-consultorio02.jpeg" alt="Consultório 2"
+                  class="w-full h-full object-cover">
+              </div>
+              <div class="carousel-slide absolute inset-0">
+                <img src="/ciro-platenik/Imagens/ciro-consultorio03.jpeg" alt="Consultório 3"
+                  class="w-full h-full object-cover">
+              </div>
 
-            <!-- Carousel Controls -->
-            <button onclick="moveCarousel(-1)"
-              class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 backdrop-blur-md flex items-center justify-center text-white hover:bg-black/50 transition-all">
-              <i data-lucide="chevron-left" class="w-5 h-5"></i>
-            </button>
-            <button onclick="moveCarousel(1)"
-              class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 backdrop-blur-md flex items-center justify-center text-white hover:bg-black/50 transition-all">
-              <i data-lucide="chevron-right" class="w-5 h-5"></i>
-            </button>
+              <!-- Controls -->
+              <button id="carousel-prev" type="button"
+                class="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-black/40 flex items-center justify-center text-white hover:bg-black/60 transition-colors">
+                <i data-lucide="chevron-left" class="w-5 h-5"></i>
+              </button>
+              <button id="carousel-next" type="button"
+                class="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-black/40 flex items-center justify-center text-white hover:bg-black/60 transition-colors">
+                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+              </button>
 
-            <!-- Indicators -->
-            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
-              <button onclick="goToSlide(0)" class="carousel-dot w-2 h-2 rounded-full bg-white opacity-100 transition-all hover:scale-125"></button>
-              <button onclick="goToSlide(1)" class="carousel-dot w-2 h-2 rounded-full bg-white opacity-30 transition-all hover:scale-125"></button>
-              <button onclick="goToSlide(2)" class="carousel-dot w-2 h-2 rounded-full bg-white opacity-30 transition-all hover:scale-125"></button>
+              <!-- Dots -->
+              <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+                <button type="button" data-index="0" class="carousel-dot w-2 h-2 rounded-full bg-white transition-opacity"></button>
+                <button type="button" data-index="1" class="carousel-dot w-2 h-2 rounded-full bg-white transition-opacity"></button>
+                <button type="button" data-index="2" class="carousel-dot w-2 h-2 rounded-full bg-white transition-opacity"></button>
+              </div>
+
             </div>
           </div>
         </div>

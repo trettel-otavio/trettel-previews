@@ -70,25 +70,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Carousel Logic
-let currentSlide = 0;
-const totalSlides = 3;
+// Carousel
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots   = document.querySelectorAll('.carousel-dot');
+    let current  = 0;
 
-function updateCarousel() {
-    document.querySelectorAll('.carousel-slide').forEach((slide, i) => {
-        slide.classList.toggle('is-active', i === currentSlide);
-    });
-    document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
-        dot.style.opacity = i === currentSlide ? '1' : '0.3';
-    });
-}
+    function show(index) {
+        current = (index + slides.length) % slides.length;
+        slides.forEach((s, i) => s.classList.toggle('is-active', i === current));
+        dots.forEach((d, i) => d.style.opacity = i === current ? '1' : '0.3');
+    }
 
-function moveCarousel(direction) {
-    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-    updateCarousel();
-}
+    document.getElementById('carousel-prev').addEventListener('click', () => show(current - 1));
+    document.getElementById('carousel-next').addEventListener('click', () => show(current + 1));
+    dots.forEach(d => d.addEventListener('click', () => show(+d.dataset.index)));
 
-function goToSlide(index) {
-    currentSlide = index;
-    updateCarousel();
-}
+    show(0);
+});
