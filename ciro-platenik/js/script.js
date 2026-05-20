@@ -80,7 +80,8 @@ function moveCarousel(direction) {
     const dots = document.querySelectorAll('.carousel-dot');
     
     if (carousel) {
-        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        const slideWidth = carousel.parentElement.offsetWidth;
+        carousel.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
     }
     
     dots.forEach((dot, index) => {
