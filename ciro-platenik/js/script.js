@@ -78,14 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function show(index) {
         current = (index + slides.length) % slides.length;
-        slides.forEach((s, i) => {
-            s.classList.toggle('opacity-0',   i !== current);
-            s.classList.toggle('opacity-100', i === current);
-        });
-        dots.forEach((d, i) => {
-            d.classList.toggle('opacity-30',  i !== current);
-            d.classList.toggle('opacity-100', i === current);
-        });
+        slides.forEach((s, i) => s.classList.toggle('slide-active', i === current));
+        dots.forEach((d, i) => d.style.opacity = i === current ? '1' : '0.3');
     }
 
     document.getElementById('carousel-prev').addEventListener('click', () => show(current - 1));
