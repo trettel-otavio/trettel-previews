@@ -85,8 +85,3 @@ main section:first-of-type {
   }
 }
 
-/* Carousel */
-.carousel-slide {
-  position: absolute;
-  inset: 0;
-}

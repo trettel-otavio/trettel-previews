@@ -76,22 +76,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const dots   = document.querySelectorAll('.carousel-dot');
     let current  = 0;
 
-    slides.forEach(s => {
-        s.style.position   = 'absolute';
-        s.style.inset      = '0';
-        s.style.transition = 'opacity 0.6s ease-in-out';
-        s.style.opacity    = '0';
-    });
-
     function show(index) {
         current = (index + slides.length) % slides.length;
-        slides.forEach((s, i) => s.style.opacity = i === current ? '1' : '0');
-        dots.forEach((d, i) => d.style.opacity   = i === current ? '1' : '0.3');
+        slides.forEach((s, i) => {
+            s.classList.toggle('opacity-0',   i !== current);
+            s.classList.toggle('opacity-100', i === current);
+        });
+        dots.forEach((d, i) => {
+            d.classList.toggle('opacity-30',  i !== current);
+            d.classList.toggle('opacity-100', i === current);
+        });
     }
 
     document.getElementById('carousel-prev').addEventListener('click', () => show(current - 1));
     document.getElementById('carousel-next').addEventListener('click', () => show(current + 1));
     dots.forEach(d => d.addEventListener('click', () => show(+d.dataset.index)));
-
-    show(0);
 });
