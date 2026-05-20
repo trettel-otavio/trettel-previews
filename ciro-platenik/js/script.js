@@ -75,13 +75,13 @@ let currentSlide = 0;
 const totalSlides = 3;
 
 function updateCarousel() {
-    const carousel = document.getElementById('office-carousel');
+    const slides = document.querySelectorAll('.carousel-slide');
     const dots = document.querySelectorAll('.carousel-dot');
 
-    if (carousel) {
-        const slideWidth = carousel.children[0].offsetWidth;
-        carousel.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-    }
+    slides.forEach((slide, index) => {
+        const offset = (index - currentSlide) * 100;
+        slide.style.transform = `translateX(${offset}%)`;
+    });
 
     dots.forEach((dot, index) => {
         dot.style.opacity = index === currentSlide ? '1' : '0.3';
@@ -97,3 +97,5 @@ function goToSlide(index) {
     currentSlide = index;
     updateCarousel();
 }
+
+document.addEventListener('DOMContentLoaded', updateCarousel);
