@@ -74,17 +74,26 @@ document.addEventListener('DOMContentLoaded', () => {
 let currentSlide = 0;
 const totalSlides = 3;
 
-function moveCarousel(direction) {
-    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+function updateCarousel() {
     const carousel = document.getElementById('office-carousel');
     const dots = document.querySelectorAll('.carousel-dot');
-    
+
     if (carousel) {
-        const slideWidth = carousel.parentElement.offsetWidth;
+        const slideWidth = carousel.children[0].offsetWidth;
         carousel.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
     }
-    
+
     dots.forEach((dot, index) => {
         dot.style.opacity = index === currentSlide ? '1' : '0.3';
     });
+}
+
+function moveCarousel(direction) {
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    updateCarousel();
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    updateCarousel();
 }
