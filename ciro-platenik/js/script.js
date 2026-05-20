@@ -75,16 +75,11 @@ let currentSlide = 0;
 const totalSlides = 3;
 
 function updateCarousel() {
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.carousel-dot');
-
-    slides.forEach((slide, index) => {
-        const offset = (index - currentSlide) * 100;
-        slide.style.transform = `translateX(${offset}%)`;
+    document.querySelectorAll('.carousel-slide').forEach((slide, i) => {
+        slide.classList.toggle('is-active', i === currentSlide);
     });
-
-    dots.forEach((dot, index) => {
-        dot.style.opacity = index === currentSlide ? '1' : '0.3';
+    document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+        dot.style.opacity = i === currentSlide ? '1' : '0.3';
     });
 }
 
@@ -97,5 +92,3 @@ function goToSlide(index) {
     currentSlide = index;
     updateCarousel();
 }
-
-document.addEventListener('DOMContentLoaded', updateCarousel);

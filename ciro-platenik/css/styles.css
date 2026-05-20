@@ -84,3 +84,15 @@ main section:first-of-type {
     font-size: 2.75rem;
   }
 }
+
+/* Carousel */
+.carousel-slide {
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+  pointer-events: none;
+}
+
+.carousel-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
