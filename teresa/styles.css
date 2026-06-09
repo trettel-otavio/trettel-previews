@@ -1,0 +1,103 @@
+/* ===== GLOBAL ===== */
+* { box-sizing: border-box; }
+
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+/* ===== LABELS / CHAPÉUS ===== */
+.chapeu {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #2e73af;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+}
+.chapeu::before {
+  content: '●';
+  font-size: 0.45rem;
+  line-height: 1;
+  color: #2e73af;
+}
+
+/* Label em fundo escuro (seção Sobre) */
+.chapeu-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #2e73af;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+}
+.chapeu-light::before {
+  content: '●';
+  font-size: 0.45rem;
+  line-height: 1;
+  color: #2e73af;
+}
+
+/* ===== BUTTONS ===== */
+.hero-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(47, 121, 255, 0.4);
+}
+.final-cta-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
+}
+
+/* ===== CHALLENGE CARDS ===== */
+.challenge-card {
+  background: white;
+}
+
+/* ===== PILARES ===== */
+.pilar-card:hover {
+  box-shadow: 0 4px 16px rgba(47, 121, 255, 0.08);
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonial-card blockquote::before {
+  content: '\201C';
+  font-family: 'Prata', serif;
+  font-size: 3.5rem;
+  color: #2f79ff;
+  opacity: 0.12;
+  line-height: 0;
+  vertical-align: -1.4rem;
+  margin-right: 0.2rem;
+}
+
+/* ===== FAQ ===== */
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+.faq-item.open .faq-icon {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  transition: all 0.3s ease;
+}
+
+/* ===== SCROLL REVEAL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  h1 { font-size: 2.75rem; line-height: 1.1; }
+}

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psicóloga Tereza Sousa | TCC - Terapia Cognitiva Comportamental</title>
+  <meta name="description" content="Psicóloga especialista em TCC (Terapia Cognitiva Comportamental). Atendimento humanizado para ansiedade, depressão, burnout e mais. Agende sua sessão.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Prata&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            azul: '#2f79ff',
+            'azul-dark': '#1a5cd6',
+            'azul-light': '#eff5ff',
+            'azul-bg': '#f7fbff',
+            cinza: '#f9fafb',
+            texto: '#0d1117',
+            muted: '#6b7280',
+            borda: '#e5e7eb',
+          },
+          fontFamily: {
+            heading: ['"Prata"', 'serif'],
+            body: ['"DM Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white font-body text-texto antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full z-50 bg-texto">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="font-heading text-white text-xl">Tereza Sousa</span>
+        <span class="text-xs font-body text-white/50">· Psicóloga CRP</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#desafios" class="text-sm text-white/60 hover:text-white transition-colors duration-200">Especialidades</a>
+        <a href="#abordagem" class="text-sm text-white/60 hover:text-white transition-colors duration-200">TCC</a>
+        <a href="#sobre" class="text-sm text-white/60 hover:text-white transition-colors duration-200">Sobre</a>
+        <a href="#faq" class="text-sm text-white/60 hover:text-white transition-colors duration-200">FAQ</a>
+      </div>
+      <a href="https://wa.me/5511996642367?text=Olá!%20Gostaria%20de%20agendar%20uma%20sessão."
+         target="_blank"
+         class="hidden md:inline-flex items-center gap-2 bg-azul hover:bg-azul-dark text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Agendar Sessão
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="bg-texto text-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 min-h-screen items-center pt-16 pb-12">
+
+      <!-- Esquerda: conteúdo -->
+      <div class="space-y-8">
+
+        <!-- Rating badge -->
+        <div class="inline-flex items-center gap-3 bg-white/10 border border-white/15 px-4 py-2 rounded-full text-sm">
+          <span class="text-yellow-400 tracking-tight">★★★★★</span>
+          <span class="text-white/70">5.0 · Avaliação dos pacientes</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="font-heading text-[42px] md:text-[56px] leading-[1.06] tracking-tight">
+          Terapia baseada em ciência, adaptada à sua história.
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-white/60 text-lg leading-relaxed max-w-md">
+          A Terapia Cognitiva Comportamental é uma abordagem estruturada e fundamentada em evidências científicas, reconhecida pelo tratamento de ansiedade, depressão e burnout.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+          <a href="https://wa.me/5511996642367?text=Olá!%20Gostaria%20de%20agendar%20uma%20sessão%20de%20TCC."
+             target="_blank"
+             class="hero-cta inline-flex items-center justify-center gap-2.5 bg-azul hover:bg-azul-dark text-white px-7 py-4 rounded-xl font-semibold text-base transition-all duration-200">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Agendar pelo WhatsApp
+          </a>
+          <a href="#abordagem"
+             class="inline-flex items-center justify-center gap-2 border border-white/25 text-white hover:bg-white/10 px-7 py-4 rounded-xl font-semibold text-base transition-all duration-200">
+            Conheça a TCC
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Direita: foto -->
+      <div class="relative flex justify-center md:justify-end">
+        <div class="relative w-full max-w-[360px]">
+          <div class="aspect-[3/4] rounded-2xl overflow-hidden">
+            <img src="imagens/teresa001.webp" alt="Psicóloga Tereza Sousa" class="w-full h-full object-cover object-top">
+          </div>
+          <!-- Stat card flutuante -->
+          <div class="absolute -bottom-5 -left-6 bg-white rounded-2xl px-6 py-4 shadow-xl">
+            <p class="text-2xl font-bold text-texto leading-none mb-1">200+</p>
+            <p class="text-sm text-muted">Atendimentos realizados</p>
+          </div>
+          <!-- Badge Instagram -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== DESAFIOS ===== -->
+  <section id="desafios" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-14">
+        <span class="chapeu">Especialidades</span>
+        <h2 class="font-heading text-[36px] md:text-[44px] text-texto mt-4 max-w-2xl leading-tight">
+          Você se identifica com algum desses padrões?
+        </h2>
+        <p class="text-muted text-lg mt-4 max-w-2xl leading-relaxed">
+          A TCC atua diretamente nos pensamentos que alimentam o sofrimento. Se algum desses temas ressoa com você, podemos conversar.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="challenge-card group p-6 rounded-2xl border border-borda hover:border-azul/40 transition-all duration-300 hover:shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-azul-light flex items-center justify-center mb-5 group-hover:bg-azul transition-colors duration-300">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#2f79ff" stroke-width="1.8" class="group-hover:stroke-white transition-colors duration-300"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <h3 class="font-semibold text-texto text-lg mb-2">Ansiedade e Pânico</h3>
+          <p class="text-muted text-sm leading-relaxed">Aprenda a identificar pensamentos que disparam a ansiedade e desenvolva estratégias para interromper o ciclo do pânico, recuperando a leveza do dia a dia.</p>
+        </div>
+
+        <div class="challenge-card group p-6 rounded-2xl border border-borda hover:border-azul/40 transition-all duration-300 hover:shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-azul-light flex items-center justify-center mb-5 group-hover:bg-azul transition-colors duration-300">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#2f79ff" stroke-width="1.8" class="group-hover:stroke-white transition-colors duration-300"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </div>
+          <h3 class="font-semibold text-texto text-lg mb-2">Depressão e Desmotivação</h3>
+          <p class="text-muted text-sm leading-relaxed">Reestruture crenças negativas sobre si mesmo e o futuro. A TCC trabalha ativamente para resgatar o prazer de viver e a motivação para agir.</p>
+        </div>
+
+        <div class="challenge-card group p-6 rounded-2xl border border-borda hover:border-azul/40 transition-all duration-300 hover:shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-azul-light flex items-center justify-center mb-5 group-hover:bg-azul transition-colors duration-300">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#2f79ff" stroke-width="1.8" class="group-hover:stroke-white transition-colors duration-300"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="font-semibold text-texto text-lg mb-2">Estresse e Burnout</h3>
+          <p class="text-muted text-sm leading-relaxed">Desenvolva habilidades de regulação emocional e limites saudáveis para sair do esgotamento e retomar o equilíbrio na vida pessoal e profissional.</p>
+        </div>
+
+        <div class="challenge-card group p-6 rounded-2xl border border-borda hover:border-azul/40 transition-all duration-300 hover:shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-azul-light flex items-center justify-center mb-5 group-hover:bg-azul transition-colors duration-300">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#2f79ff" stroke-width="1.8" class="group-hover:stroke-white transition-colors duration-300"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="font-semibold text-texto text-lg mb-2">Insônia</h3>
+          <p class="text-muted text-sm leading-relaxed">A TCC para insônia (TCC-I) é reconhecida como o tratamento padrão ouro. Aprenda a transformar sua relação com o sono sem depender de medicamentos.</p>
+        </div>
+
+        <div class="challenge-card group p-6 rounded-2xl border border-borda hover:border-azul/40 transition-all duration-300 hover:shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-azul-light flex items-center justify-center mb-5 group-hover:bg-azul transition-colors duration-300">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#2f79ff" stroke-width="1.8" class="group-hover:stroke-white transition-colors duration-300"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="font-semibold text-texto text-lg mb-2">Traumas e Fobias</h3>
+          <p class="text-muted text-sm leading-relaxed">Com técnicas específicas da TCC, processamos experiências difíceis e trabalhamos medos que limitam sua vida, de forma gradual, segura e eficaz.</p>
+        </div>
+
+        <div class="challenge-card group p-6 rounded-2xl border border-borda hover:border-azul/40 transition-all duration-300 hover:shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-azul-light flex items-center justify-center mb-5 group-hover:bg-azul transition-colors duration-300">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#2f79ff" stroke-width="1.8" class="group-hover:stroke-white transition-colors duration-300"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-semibold text-texto text-lg mb-2">Dificuldade em Tomar Decisões</h3>
+          <p class="text-muted text-sm leading-relaxed">Insegurança e medo de errar travam quem você poderia ser. A TCC ajuda a identificar crenças limitantes e desenvolver confiança para escolher com clareza.</p>
+        </div>
+
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="https://wa.me/5511996642367?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações."
+           target="_blank"
+           class="inline-flex items-center gap-2 bg-azul hover:bg-azul-dark text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200">
+          Quero iniciar meu atendimento
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEPOIMENTOS ===== -->
+  <section id="depoimentos" class="py-24 bg-azul-bg">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-14">
+        <span class="chapeu">Depoimentos</span>
+        <h2 class="font-heading text-[36px] md:text-[44px] text-texto mt-4 leading-tight">
+          O que dizem sobre o atendimento
+        </h2>
+        <p class="text-muted text-lg mt-4 max-w-xl leading-relaxed">
+          Cada jornada terapêutica é singular. Esses são relatos de pessoas que escolheram cuidar da sua saúde mental.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <div class="testimonial-card bg-white p-8 rounded-2xl border border-borda">
+          <div class="flex items-center gap-1 mb-5">
+            <span class="text-yellow-400 text-sm tracking-tight">★★★★★</span>
+          </div>
+          <blockquote class="text-texto/70 leading-relaxed mb-6 text-sm">
+            "Quando cheguei para a Tereza, mal conseguia sair de casa por causa da ansiedade. Depois de alguns meses com a TCC, aprendi a identificar os pensamentos que me travavam. Hoje me sinto no controle da minha vida de novo."
+          </blockquote>
+          <div class="pt-5 border-t border-borda">
+            <p class="font-semibold text-texto text-sm">Amanda R.</p>
+            <p class="text-muted text-xs mt-0.5">Tratamento para Ansiedade</p>
+          </div>
+        </div>
+
+        <div class="testimonial-card bg-white p-8 rounded-2xl border border-borda">
+          <div class="flex items-center gap-1 mb-5">
+            <span class="text-yellow-400 text-sm tracking-tight">★★★★★</span>
+          </div>
+          <blockquote class="text-texto/70 leading-relaxed mb-6 text-sm">
+            "Eu estava completamente esgotado, no limite do burnout. A Tereza me ajudou a entender que meus padrões de pensamento me sabotavam. O atendimento dela é acolhedor e ao mesmo tempo muito prático. Já indiquei para toda a família."
+          </blockquote>
+          <div class="pt-5 border-t border-borda">
+            <p class="font-semibold text-texto text-sm">Carlos M.</p>
+            <p class="text-muted text-xs mt-0.5">Tratamento para Burnout</p>
+          </div>
+        </div>
+
+        <div class="testimonial-card bg-white p-8 rounded-2xl border border-borda">
+          <div class="flex items-center gap-1 mb-5">
+            <span class="text-yellow-400 text-sm tracking-tight">★★★★★</span>
+          </div>
+          <blockquote class="text-texto/70 leading-relaxed mb-6 text-sm">
+            "Há anos eu não dormia bem e não conseguia entender o motivo. Com a TCC-I da Tereza, aprendi que minha relação com o sono estava completamente distorcida. Hoje durmo sem remédio e acordo descansada. Algo que parecia impossível."
+          </blockquote>
+          <div class="pt-5 border-t border-borda">
+            <p class="font-semibold text-texto text-sm">Fernanda S.</p>
+            <p class="text-muted text-xs mt-0.5">Tratamento para Insônia</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="https://wa.me/5511996642367?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sessão."
+           target="_blank"
+           class="inline-flex items-center gap-2 bg-azul hover:bg-azul-dark text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200">
+          Quero iniciar meu atendimento
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABORDAGEM TCC ===== -->
+  <section id="abordagem" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-start">
+
+        <div class="space-y-6">
+          <span class="chapeu">A Abordagem</span>
+          <h2 class="font-heading text-[36px] md:text-[44px] text-texto leading-tight mt-4">
+            O que é a Terapia Cognitiva Comportamental?
+          </h2>
+          <p class="text-muted leading-relaxed">
+            A TCC é uma abordagem estruturada, objetiva e baseada em evidências científicas. Diferente de outras terapias, ela foca em problemas atuais, ensinando você a reconhecer como seus pensamentos influenciam suas emoções e comportamentos.
+          </p>
+          <p class="text-muted leading-relaxed">
+            O objetivo é que você se torne <strong class="text-texto font-semibold">seu próprio terapeuta</strong>, desenvolvendo ferramentas para enfrentar qualquer desafio que apareça, com autonomia e confiança.
+          </p>
+          <a href="https://wa.me/5511996642367?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20TCC."
+             target="_blank"
+             class="inline-flex items-center gap-2 text-azul font-semibold hover:gap-4 transition-all duration-300">
+            Conversar com a psicóloga
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+
+        <div class="space-y-3">
+          <div class="pilar-card flex items-start gap-5 p-6 rounded-2xl border border-borda hover:border-azul/40 transition-all duration-200">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-azul flex items-center justify-center">
+              <span class="text-white font-bold">1</span>
+            </div>
+            <div>
+              <h4 class="font-semibold text-texto mb-1.5">Pensamentos</h4>
+              <p class="text-muted text-sm leading-relaxed">Identifique e questione padrões de pensamento automáticos que causam sofrimento.</p>
+            </div>
+          </div>
+
+          <div class="pilar-card flex items-start gap-5 p-6 rounded-2xl border border-borda hover:border-azul/40 transition-all duration-200">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-azul flex items-center justify-center">
+              <span class="text-white font-bold">2</span>
+            </div>
+            <div>
+              <h4 class="font-semibold text-texto mb-1.5">Emoções</h4>
+              <p class="text-muted text-sm leading-relaxed">Compreenda e regule suas emoções de forma saudável, sem fugir nem ser dominado por elas.</p>
+            </div>
+          </div>
+
+          <div class="pilar-card flex items-start gap-5 p-6 rounded-2xl border border-borda hover:border-azul/40 transition-all duration-200">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-azul flex items-center justify-center">
+              <span class="text-white font-bold">3</span>
+            </div>
+            <div>
+              <h4 class="font-semibold text-texto mb-1.5">Comportamentos</h4>
+              <p class="text-muted text-sm leading-relaxed">Desenvolva novas formas de agir que gerem mais bem-estar e melhores resultados na sua vida.</p>
+            </div>
+          </div>
+
+          <div class="pilar-card flex items-start gap-5 p-6 rounded-2xl border border-borda hover:border-azul/40 transition-all duration-200">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-azul flex items-center justify-center">
+              <span class="text-white font-bold">4</span>
+            </div>
+            <div>
+              <h4 class="font-semibold text-texto mb-1.5">Crenças</h4>
+              <p class="text-muted text-sm leading-relaxed">Transforme crenças limitantes profundas que moldam sua visão de si mesmo e do mundo.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE MIM ===== -->
+  <section id="sobre" class="py-24 bg-texto text-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
+      <div class="relative">
+        <div class="aspect-[3/4] max-w-sm mx-auto rounded-2xl overflow-hidden">
+          <img src="imagens/teresa002.webp" alt="Psicóloga Tereza Sousa" class="w-full h-full object-cover object-top">
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <span class="chapeu-light">Sobre mim</span>
+        <h2 class="font-heading text-[36px] md:text-[44px] leading-tight mt-4">
+          Psicóloga Tereza Sousa
+        </h2>
+        <div class="w-12 h-0.5 bg-azul rounded-full"></div>
+        <p class="text-white/70 leading-relaxed">
+          Sou psicóloga especializada em Terapia Cognitiva Comportamental (TCC) e acredito que cada pessoa merece um espaço seguro para ser ouvida, compreendida e respeitada na sua individualidade.
+        </p>
+        <p class="text-white/70 leading-relaxed">
+          Meu diferencial está no <strong class="text-white">acolhimento humanizado</strong>, na escuta atenta e no compromisso com um atendimento ético, empático e personalizado. Valorizo a construção do vínculo terapêutico e o cuidado contínuo, porque acredito que cuidar da mente também é um ato de amor.
+        </p>
+        <p class="text-white/70 leading-relaxed">
+          Atendo adolescentes, adultos e idosos, de forma presencial e online, para que o cuidado com sua saúde mental seja sempre acessível.
+        </p>
+        <div class="grid grid-cols-2 gap-3 pt-2">
+          <div class="flex items-center gap-2 text-white/60 text-sm">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#2f79ff" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            Escuta ativa e sem julgamento
+          </div>
+          <div class="flex items-center gap-2 text-white/60 text-sm">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#2f79ff" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            Atendimento personalizado
+          </div>
+          <div class="flex items-center gap-2 text-white/60 text-sm">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#2f79ff" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            Presencial e Online
+          </div>
+          <div class="flex items-center gap-2 text-white/60 text-sm">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#2f79ff" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            Baseado em evidências
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="py-24 bg-azul-bg">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-14 space-y-3">
+        <span class="chapeu justify-center">Dúvidas Frequentes</span>
+        <h2 class="font-heading text-[36px] md:text-[44px] text-texto mt-4 leading-tight">Antes de começar</h2>
+      </div>
+
+      <div class="space-y-2" id="faq-list">
+
+        <div class="faq-item bg-white rounded-2xl border border-borda overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-5 flex items-center justify-between gap-4 hover:bg-azul-bg transition-colors duration-200" onclick="toggleFaq(this)">
+            <span class="font-semibold text-texto text-sm">Será que consigo encaixar esse investimento na minha rotina?</span>
+            <svg class="faq-icon flex-shrink-0 text-muted transition-transform duration-300" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-muted leading-relaxed text-sm">
+            A sessão de TCC tem duração de cerca de 50 minutos, uma vez por semana. Trabalhamos juntos para encontrar um horário que funcione para a sua rotina, inclusive com opção online, para máxima flexibilidade.
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-2xl border border-borda overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-5 flex items-center justify-between gap-4 hover:bg-azul-bg transition-colors duration-200" onclick="toggleFaq(this)">
+            <span class="font-semibold text-texto text-sm">Será que vou me identificar com a abordagem da psicóloga?</span>
+            <svg class="faq-icon flex-shrink-0 text-muted transition-transform duration-300" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-muted leading-relaxed text-sm">
+            É completamente normal ter essa dúvida! A primeira sessão é justamente um espaço para você me conhecer, sentir minha abordagem e tirar todas as suas dúvidas. Não existe compromisso além disso. Meu atendimento é acolhedor, empático e personalizado, adaptado à sua história e ao seu ritmo.
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-2xl border border-borda overflow-hidden">
+          <button class="faq-btn w-full text-left px-6 py-5 flex items-center justify-between gap-4 hover:bg-azul-bg transition-colors duration-200" onclick="toggleFaq(this)">
+            <span class="font-semibold text-texto text-sm">Tenho medo de demorar muito para perceber melhora.</span>
+            <svg class="faq-icon flex-shrink-0 text-muted transition-transform duration-300" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-muted leading-relaxed text-sm">
+            A TCC é uma das abordagens com maior respaldo científico na psicologia. Por ser focada em problemas específicos e usar técnicas práticas, muitos pacientes percebem mudanças ao longo do processo. Cada jornada terapêutica tem o seu ritmo próprio.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section id="contato" class="py-28 bg-azul text-white">
+    <div class="max-w-2xl mx-auto px-6 text-center space-y-8">
+      <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm font-medium">
+        Dê o primeiro passo
+      </div>
+      <h2 class="font-heading text-[36px] md:text-[44px] leading-tight">
+        A terapia como espaço de cuidado consigo mesmo.
+      </h2>
+      <p class="text-white/70 leading-relaxed max-w-lg mx-auto">
+        Você merece um espaço seguro para ser ouvido, compreendido e cuidado. Entre em contato e agende sua sessão com a Psicóloga Tereza Sousa.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+        <a href="https://wa.me/5511996642367?text=Olá!%20Quero%20agendar%20uma%20sessão%20de%20TCC."
+           target="_blank"
+           class="final-cta-btn inline-flex items-center justify-center gap-3 bg-white hover:bg-azul-light text-azul px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-200">
+          <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-texto text-white/50 py-16 text-center text-sm">
+    <div class="max-w-2xl mx-auto px-6 space-y-6">
+      <div class="space-y-1">
+        <p class="font-heading text-white text-xl">Tereza Sousa</p>
+        <p class="text-white/50 text-sm">Psicóloga CRP · Terapia Cognitiva Comportamental</p>
+      </div>
+      <div class="border-t border-white/10 pt-6 space-y-1">
+        <p class="text-white/40 text-xs">© 2025 Tereza Sousa. Todos os direitos reservados.</p>
+        <p class="text-white/30 text-xs">
+          Desenvolvido por:
+          <a href="https://www.instagram.com/otaviotrettel/" target="_blank" class="hover:text-white/60 transition-colors duration-200 underline underline-offset-2">Otavio Trettel</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/5511996642367?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sessão."
+     target="_blank"
+     class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-xl shadow-green-500/40 transition-all duration-300 hover:scale-110">
+    <svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
