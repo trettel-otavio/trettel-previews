@@ -9,7 +9,7 @@
     content="Psicologia presencial na Barra da Tijuca focada em performance, clareza mental e resultados concretos para empresários e profissionais.">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/ciro-platenik/Imagens/fav-cion-ciro-platenik.svg">
+  <link rel="icon" type="image/svg+xml" href="Imagens/fav-cion-ciro-platenik.svg">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -59,6 +59,10 @@
     @media (max-width: 768px) { .text-display-lg { font-size: 2.75rem; } }
     .carousel-slide { position: absolute; inset: 0; opacity: 0; z-index: 0; transition: opacity 0.6s ease-in-out; }
     .carousel-slide.slide-active { opacity: 1; z-index: 1; }
+    .testimonial-scroll::-webkit-scrollbar { width: 4px; }
+    .testimonial-scroll::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 10px; }
+    .testimonial-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+    .testimonial-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
   </style>
 </head>
 
@@ -96,7 +100,7 @@
     <section class="relative h-screen flex items-center px-6 overflow-hidden">
       <!-- Background Image -->
       <div class="absolute inset-0 z-0">
-        <img src="/ciro-platenik/Imagens/hero_banner_ciro.webp" alt="Ciro Platenik"
+        <img src="Imagens/hero_banner_ciro.webp" alt="Ciro Platenik"
           class="w-full h-full object-cover object-center">
         <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.05) 100%);"></div>
       </div>
@@ -132,7 +136,7 @@
         <div class="mb-20 max-w-3xl">
           <span class="text-xs font-medium uppercase tracking-widest text-secondary mb-4 block">Benefícios do meu
             atendimento</span>
-          <h2 class="text-4xl md:text-5xl font-medium text-primary mb-6">O que muda quando você entende como sua mente funciona.</h2>
+          <h2 class="text-4xl md:text-5xl font-medium text-primary mb-6">O que muda quando você entende como sua mente funciona:</h2>
           <p class="text-lg text-secondary leading-relaxed md:line-clamp-3">
             Cada sessão é construída com objetivo claro. Não é conversa por conversa. É um processo direto, orientado
             para o que realmente trava seu desempenho.
@@ -202,86 +206,215 @@
       <div class="container mx-auto relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-20">
           <span class="text-xs font-medium uppercase tracking-widest text-secondary mb-4 block">Depoimentos</span>
-          <h2 class="text-4xl md:text-5xl font-medium text-primary mb-6">O que meus pacientes.</h2>
+          <h2 class="text-4xl md:text-5xl font-medium text-primary mb-6">O que dizem meus pacientes.</h2>
           <p class="text-lg text-secondary">
             Opiniões de quem já viveu o atendimento na prática.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <!-- Testimonial 1 -->
-          <div class="bg-white p-10 rounded-2xl border border-gray-100 shadow-sm reveal" data-delay="0">
-            <div class="flex mb-6">
-              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+        <!-- Testimonials Carousel -->
+        <div class="max-w-3xl mx-auto reveal">
+          <div class="flex items-center gap-3 md:gap-6">
+            <!-- Prev -->
+            <button id="testimonial-prev" type="button"
+              class="shrink-0 w-10 h-10 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 shadow-sm">
+              <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Track wrapper -->
+            <div class="overflow-hidden flex-1">
+              <div id="testimonial-track" class="flex" style="transition: transform 0.5s ease-in-out;">
+
+                <!-- 1. Sérgio Fernandes -->
+                <div class="testimonial-slide-item w-full shrink-0">
+                  <div class="bg-white p-8 md:p-10 rounded-2xl border border-gray-100 shadow-sm">
+                    <div class="flex gap-0.5 mb-5">
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                    </div>
+                    <div class="overflow-y-auto max-h-48 pr-2 testimonial-scroll mb-6">
+                      <p class="text-gray-700 italic leading-relaxed">Ciro foi definitivamente a maior sorte que eu dei na psicologia. Sou paciente há 7 anos e ele mudou a minha vida. Já recomendei pra muitos amigos e sempre ouvi feedbacks positivos deles também.<br><br>A abordagem do Ciro é de ouvir com atenção, acolher mas ao mesmo tempo fazer pensar sobre o que precisa ser resolvido. Eu enxergo cada dia mais quanto os desafios, medos, crenças e inseguranças foram diminuindo ou até sumindo com a continuidade da terapia.<br><br>Virei um fã de psicologia depois que me tornei paciente dele e não vejo mais minha vida sem.<br><br>Se você está em dúvida sobre dar esse passo ou não, posso te dizer que foi uma das melhores decisões que já tomei e colho frutos disso até hoje, mesmo tendo iniciado há 7 anos atrás.<br><br>Recomendo de olhos fechados 🙏</p>
+                    </div>
+                    <div class="flex items-center border-t border-gray-50 pt-6">
+                      <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-xs font-bold mr-4 shrink-0">SF</div>
+                      <div>
+                        <div class="font-medium text-sm">Sérgio Fernandes</div>
+                        <div class="text-xs text-secondary">Google Reviews</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Felipe Getthi -->
+                <div class="testimonial-slide-item w-full shrink-0">
+                  <div class="bg-white p-8 md:p-10 rounded-2xl border border-gray-100 shadow-sm">
+                    <div class="flex gap-0.5 mb-5">
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                    </div>
+                    <div class="overflow-y-auto max-h-48 pr-2 testimonial-scroll mb-6">
+                      <p class="text-gray-700 italic leading-relaxed">Tive a oportunidade de fazer terapia com o Ciro e posso dizer que foi uma experiência transformadora.<br><br>Sua metodologia é diferenciada, conduzida com muita competência, sensibilidade e profissionalismo. Um dos aspectos que mais me marcou foi o fato de que ele não é aquele terapeuta que apenas escuta e faz poucas intervenções. Nossas sessões eram verdadeiras conversas: participativas, profundas e muito bem conduzidas. Cada encontro trazia reflexões valiosas, questionamentos precisos e perspectivas que me ajudaram a desbloquear questões pessoais importantes.<br><br>Ao longo do processo, construí um enorme respeito e admiração pelo seu trabalho. Além do conhecimento técnico, o Ciro demonstra uma capacidade rara de compreender as necessidades de cada pessoa e conduzir o processo terapêutico de forma ativa, acolhedora e extremamente eficaz.<br><br>Sou muito grato por tudo o que conseguimos construir juntos durante esse período. O impacto desse trabalho foi significativo para o meu desenvolvimento pessoal e para a forma como passei a enxergar diversas situações da vida.<br><br>Sempre que alguém me pede indicação de terapeuta, recomendo o Ciro de olhos fechados. Excelente profissional, extremamente competente e comprometido com os resultados de seus pacientes.</p>
+                    </div>
+                    <div class="flex items-center border-t border-gray-50 pt-6">
+                      <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-xs font-bold mr-4 shrink-0">FG</div>
+                      <div>
+                        <div class="font-medium text-sm">Felipe Getthi</div>
+                        <div class="text-xs text-secondary">Google Reviews</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Henrique Kretzschmar -->
+                <div class="testimonial-slide-item w-full shrink-0">
+                  <div class="bg-white p-8 md:p-10 rounded-2xl border border-gray-100 shadow-sm">
+                    <div class="flex gap-0.5 mb-5">
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                    </div>
+                    <div class="overflow-y-auto max-h-48 pr-2 testimonial-scroll mb-6">
+                      <p class="text-gray-700 italic leading-relaxed">O melhor psicólogo que já tive com certeza absoluta, com certeza foi um dos responsáveis pra chegar aonde cheguei na vida empresarial sem ficar maluco. A forma com que ele faz você se auto questionar e ver perspectivas diferentes faz toda a diferença. Recomendo de olhos fechados.</p>
+                    </div>
+                    <div class="flex items-center border-t border-gray-50 pt-6">
+                      <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-xs font-bold mr-4 shrink-0">HK</div>
+                      <div>
+                        <div class="font-medium text-sm">Henrique Kretzschmar</div>
+                        <div class="text-xs text-secondary">Google Reviews</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 4. Fernanda Govea -->
+                <div class="testimonial-slide-item w-full shrink-0">
+                  <div class="bg-white p-8 md:p-10 rounded-2xl border border-gray-100 shadow-sm">
+                    <div class="flex gap-0.5 mb-5">
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                    </div>
+                    <div class="overflow-y-auto max-h-48 pr-2 testimonial-scroll mb-6">
+                      <p class="text-gray-700 italic leading-relaxed">O Ciro é incrível. Passei alguns anos buscando um psicólogo que eu conseguisse me expressar e conectar. Ele foi essa pessoa, me ajudou a superar uma depressão e a encontrar mecanismos para lhe dar com crises de ansiedade. A terapia cognitiva-comportamental me ajudou a superar muitos momentos da vida. Indico de olhos fechados!</p>
+                    </div>
+                    <div class="flex items-center border-t border-gray-50 pt-6">
+                      <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-xs font-bold mr-4 shrink-0">FG</div>
+                      <div>
+                        <div class="font-medium text-sm">Fernanda Govea</div>
+                        <div class="text-xs text-secondary">Google Reviews</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 5. Roberto Jana de Sá -->
+                <div class="testimonial-slide-item w-full shrink-0">
+                  <div class="bg-white p-8 md:p-10 rounded-2xl border border-gray-100 shadow-sm">
+                    <div class="flex gap-0.5 mb-5">
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                    </div>
+                    <div class="overflow-y-auto max-h-48 pr-2 testimonial-scroll mb-6">
+                      <p class="text-gray-700 italic leading-relaxed">O Ciro foi meu psicólogo durante a pandemia e foi sem dúvida uma luz no fim do túnel, com a ajuda dele pude passar por uma das fases mais complicadas da minha vida, só tenho a agradecer e super recomendo!</p>
+                    </div>
+                    <div class="flex items-center border-t border-gray-50 pt-6">
+                      <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-xs font-bold mr-4 shrink-0">RJ</div>
+                      <div>
+                        <div class="font-medium text-sm">Roberto Jana de Sá</div>
+                        <div class="text-xs text-secondary">Google Reviews</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 6. Bianca Souza -->
+                <div class="testimonial-slide-item w-full shrink-0">
+                  <div class="bg-white p-8 md:p-10 rounded-2xl border border-gray-100 shadow-sm">
+                    <div class="flex gap-0.5 mb-5">
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                    </div>
+                    <div class="overflow-y-auto max-h-48 pr-2 testimonial-scroll mb-6">
+                      <p class="text-gray-700 italic leading-relaxed">Fazer terapia com o Ciro foi uma das melhores decisões que tomei. Ao longo desses 2 anos, recebi acolhimento, orientação e ferramentas que fizeram uma grande diferença na minha vida. É um profissional empático, cuidadoso e dedicado, que realmente se importa com seus pacientes.<br><br>Graças ao trabalho desenvolvido nas sessões, consegui evoluir em diversos aspectos da minha vida pessoal e profissional. Sou muito grata por todo o suporte e por me ajudar a enxergar situações com mais clareza, confiança e equilíbrio.</p>
+                    </div>
+                    <div class="flex items-center border-t border-gray-50 pt-6">
+                      <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-xs font-bold mr-4 shrink-0">BS</div>
+                      <div>
+                        <div class="font-medium text-sm">Bianca Souza</div>
+                        <div class="text-xs text-secondary">Google Reviews</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 7. Robert Foster -->
+                <div class="testimonial-slide-item w-full shrink-0">
+                  <div class="bg-white p-8 md:p-10 rounded-2xl border border-gray-100 shadow-sm">
+                    <div class="flex gap-0.5 mb-5">
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                      <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
+                    </div>
+                    <div class="overflow-y-auto max-h-48 pr-2 testimonial-scroll mb-6">
+                      <p class="text-gray-700 italic leading-relaxed">Sou paciente faz alguns anos. Ciro me ajudou muito no controle da ansiedade e na evolução pessoal e profissional. Sou eternamente grato pelas consultas e evolução nesse período. Recomendo a todos que precisem de ajuda psicológica! Obrigado Ciro!</p>
+                    </div>
+                    <div class="flex items-center border-t border-gray-50 pt-6">
+                      <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-xs font-bold mr-4 shrink-0">RF</div>
+                      <div>
+                        <div class="font-medium text-sm">Robert Foster</div>
+                        <div class="text-xs text-secondary">Google Reviews</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div><!-- end track -->
             </div>
-            <p class="text-gray-700 italic mb-8 leading-relaxed">"Fui ao Ciro passando por um momento difícil na
-              empresa. Em poucas semanas comecei a enxergar as situações de um ângulo diferente. A objetividade das
-              sessões é o que mais me surpreendeu."</p>
-            <div class="flex items-center">
-              <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-xs font-bold mr-4">MA
-              </div>
-              <div>
-                <div class="font-medium text-sm">M. A. · Empresário</div>
-                <div class="text-xs text-secondary">Google Reviews</div>
-              </div>
-            </div>
+
+            <!-- Next -->
+            <button id="testimonial-next" type="button"
+              class="shrink-0 w-10 h-10 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 shadow-sm">
+              <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
           </div>
-          <!-- Testimonial 2 -->
-          <div class="bg-white p-10 rounded-2xl border border-gray-100 shadow-sm reveal" data-delay="100">
-            <div class="flex mb-6">
-              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
-            </div>
-            <p class="text-gray-700 italic mb-8 leading-relaxed">"Profissional extremamente competente. Cada sessão
-              termina com algo prático para levar. Não é aquela terapia que você sai sem saber o que fez. Tem direção,
-              tem evolução."</p>
-            <div class="flex items-center">
-              <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-xs font-bold mr-4">RF
-              </div>
-              <div>
-                <div class="font-medium text-sm">R. F. · Executivo</div>
-                <div class="text-xs text-secondary">Google Reviews</div>
-              </div>
-            </div>
-          </div>
-          <!-- Testimonial 3 -->
-          <div class="bg-white p-10 rounded-2xl border border-gray-100 shadow-sm reveal" data-delay="200">
-            <div class="flex mb-6">
-              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand text-brand"></i>
-            </div>
-            <p class="text-gray-700 italic mb-8 leading-relaxed">"Procurei o Ciro por indicação e foi uma das melhores
-              decisões que tomei. Ele consegue ir direto ao ponto sem perder a sensibilidade. Meu desempenho melhorou de
-              forma notável."</p>
-            <div class="flex items-center">
-              <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-xs font-bold mr-4">CB
-              </div>
-              <div>
-                <div class="font-medium text-sm">C. B. · Profissional Liberal</div>
-                <div class="text-xs text-secondary">Google Reviews</div>
-              </div>
-            </div>
+
+          <!-- Dots -->
+          <div class="flex justify-center gap-2 mt-6">
+            <button type="button" data-t-index="0" class="testimonial-dot w-2 h-2 rounded-full transition-all duration-300"></button>
+            <button type="button" data-t-index="1" class="testimonial-dot w-2 h-2 rounded-full transition-all duration-300"></button>
+            <button type="button" data-t-index="2" class="testimonial-dot w-2 h-2 rounded-full transition-all duration-300"></button>
+            <button type="button" data-t-index="3" class="testimonial-dot w-2 h-2 rounded-full transition-all duration-300"></button>
+            <button type="button" data-t-index="4" class="testimonial-dot w-2 h-2 rounded-full transition-all duration-300"></button>
+            <button type="button" data-t-index="5" class="testimonial-dot w-2 h-2 rounded-full transition-all duration-300"></button>
+            <button type="button" data-t-index="6" class="testimonial-dot w-2 h-2 rounded-full transition-all duration-300"></button>
           </div>
         </div>
 
-        <div class="text-center mb-16">
+        <div class="text-center mt-16">
           <a href="https://www.google.com/search?q=ciro+platenik+psicologo#lrd=0x9bd915f7956a81:0x4e6d4454f7623a3a,1"
             target="_blank"
             class="text-sm font-medium border-b border-brand pb-1 hover:text-secondary hover:border-secondary transition-all">Avaliações
             verificadas no Google · Ver todas as avaliações →</a>
         </div>
 
-      </div>
       </div>
     </section>
 
@@ -404,19 +537,19 @@
 
               <!-- Slides -->
               <div class="carousel-slide slide-active">
-                <img src="/ciro-platenik/Imagens/carrossel_01.webp" alt="Consultório 1"
+                <img src="Imagens/carrossel_01.webp" alt="Consultório 1"
                   class="w-full h-full object-cover">
               </div>
               <div class="carousel-slide">
-                <img src="/ciro-platenik/Imagens/carrossel_02.webp" alt="Consultório 2"
+                <img src="Imagens/carrossel_02.webp" alt="Consultório 2"
                   class="w-full h-full object-cover">
               </div>
               <div class="carousel-slide">
-                <img src="/ciro-platenik/Imagens/carrossel_03.webp" alt="Consultório 3"
+                <img src="Imagens/carrossel_03.webp" alt="Consultório 3"
                   class="w-full h-full object-cover">
               </div>
               <div class="carousel-slide">
-                <img src="/ciro-platenik/Imagens/carrossel_04.webp" alt="Consultório 4"
+                <img src="Imagens/carrossel_04.webp" alt="Consultório 4"
                   class="w-full h-full object-cover">
               </div>
 
@@ -449,7 +582,7 @@
       <div class="container mx-auto">
         <div class="flex flex-col md:flex-row gap-16 items-center mb-20">
           <div class="w-full md:w-[35%] aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl reveal shrink-0">
-            <img src="/ciro-platenik/Imagens/ciro_platenik_sobre.webp" alt="Ciro Platenik - Psicólogo"
+            <img src="Imagens/ciro_platenik_sobre.webp" alt="Ciro Platenik - Psicólogo"
               class="w-full h-full object-cover">
           </div>
           <div class="reveal">
@@ -509,8 +642,7 @@
               <i data-lucide="shield-check" class="w-5 h-5"></i>
             </div>
             <h5 class="font-medium text-primary mb-2">Atendimento exclusivo</h5>
-            <p class="text-sm text-secondary">Sem convênio, sem fila, sem pressa. Você tem atenção total na Barra da
-              Tijuca.</p>
+            <p class="text-sm text-secondary">Sem convênio, sem fila, sem pressa. Atendimento presencial na Barra da Tijuca ou online, com atenção total.</p>
           </div>
         </div>
       </div>
@@ -552,21 +684,16 @@
 
   <footer class="py-12 border-t border-gray-100 px-6">
     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center md:items-start">
         <div class="text-sm font-medium tracking-tight">
           CIRO<span class="font-light text-secondary">PLATENIK</span>
         </div>
         <span class="text-xs text-gray-400 mt-0.5">CRP 05/38965</span>
       </div>
-      <div class="text-xs text-secondary">
+      <div class="text-xs text-secondary text-center">
         © 2026 Ciro Platenik. Todos os direitos reservados.
       </div>
-      <div class="flex space-x-6">
-        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i data-lucide="instagram"
-            class="w-5 h-5"></i></a>
-        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i data-lucide="linkedin"
-            class="w-5 h-5"></i></a>
-      </div>
+      <span class="text-xs text-gray-400">desenvolvido por: <a href="https://www.instagram.com/otaviotrettel/" target="_blank" class="hover:text-primary transition-colors">Trettel Digital</a></span>
     </div>
   </footer>
 
@@ -621,7 +748,26 @@
         });
       });
 
-      // Carousel
+      // Testimonials Carousel
+      const tTrack = document.getElementById('testimonial-track');
+      const tItems = document.querySelectorAll('.testimonial-slide-item');
+      const tDots  = document.querySelectorAll('.testimonial-dot');
+      let tCurrent = 0;
+      function showTestimonial(index) {
+        tCurrent = (index + tItems.length) % tItems.length;
+        tTrack.style.transform = `translateX(-${tCurrent * 100}%)`;
+        tDots.forEach((d, i) => {
+          d.style.backgroundColor = i === tCurrent ? '#2B58E9' : '#CBD5E1';
+          d.style.width = i === tCurrent ? '1.5rem' : '0.5rem';
+          d.style.borderRadius = '9999px';
+        });
+      }
+      document.getElementById('testimonial-prev').addEventListener('click', () => showTestimonial(tCurrent - 1));
+      document.getElementById('testimonial-next').addEventListener('click', () => showTestimonial(tCurrent + 1));
+      tDots.forEach(d => d.addEventListener('click', () => showTestimonial(+d.dataset.tIndex)));
+      showTestimonial(0);
+
+      // Consultório Carousel
       const slides = document.querySelectorAll('.carousel-slide');
       const dots   = document.querySelectorAll('.carousel-dot');
       let current  = 0;
